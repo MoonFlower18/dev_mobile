@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxWidth="11000dp"
+    android:maxHeight="2500dp"
+    android:minWidth="10dp"
+    android:minHeight="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="181dp"
+        android:layout_height="97dp"
+        android:fontFamily="@font/dancing_script"
+        android:gravity="center"
+        android:text="My first beautyful text!"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/navbut1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <Button
+        android:id="@+id/navbut3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_3"
+        app:layout_constraintBottom_toTopOf="@+id/navbut4"
+        app:layout_constraintStart_toStartOf="@+id/navbut4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:id="@+id/navbut2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_2"
+        app:layout_constraintBottom_toTopOf="@+id/navbut3"
+        app:layout_constraintStart_toStartOf="@+id/navbut3" />
+
+    <Button
+        android:id="@+id/navbut1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_1"
+        app:layout_constraintBottom_toTopOf="@+id/navbut2"
+        app:layout_constraintStart_toStartOf="@+id/navbut2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="674dp"
+        android:layout_height="208dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607"
+        app:srcCompat="@drawable/flower1v1" />
+
+    <Button
+        android:id="@+id/navbut4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_4"
+        app:layout_constraintBottom_toTopOf="@+id/navbut5"
+        app:layout_constraintStart_toStartOf="@+id/navbut5" />
+
+    <Button
+        android:id="@+id/navbut5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_5"
+        app:layout_constraintBottom_toTopOf="@+id/navbut6"
+        app:layout_constraintStart_toStartOf="@+id/navbut6" />
+
+    <Button
+        android:id="@+id/navbut6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_6"
+        app:layout_constraintBottom_toTopOf="@+id/navbut7"
+        app:layout_constraintStart_toStartOf="@+id/navbut7" />
+
+    <Button
+        android:id="@+id/navbut7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_7"
+        app:layout_constraintBottom_toTopOf="@+id/navbut8"
+        app:layout_constraintStart_toStartOf="@+id/navbut8" />
+
+    <Button
+        android:id="@+id/navbut8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Задание_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
