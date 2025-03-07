@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,8 +21,17 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        //TextView myTextView = (TextView) findViewById(R.id.textView);
+        // Код для заданий 6 главы
+        TextView myTextView = (TextView) findViewById(R.id.textViewStudent);
+        myTextView.setText("New text in MIREA");
 
+        Button buttonStudent = findViewById(R.id.buttonStudent);
+        buttonStudent.setText("MireaButton");
+
+        CheckBox checkBoxStudent = findViewById(R.id.checkBoxStudent);
+        checkBoxStudent.setChecked(true);
+
+        // Навигация главной страницы
         Button butn1 = findViewById(R.id.navbut1);
         Button butn2 = findViewById(R.id.navbut2);
         Button butn3 = findViewById(R.id.navbut3);
