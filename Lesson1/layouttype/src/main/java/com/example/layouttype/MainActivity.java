@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.control_lesson1);
 
 //        Button butn1 = findViewById(R.id.navbut1);
 //        Button butn2 = findViewById(R.id.navbut2);

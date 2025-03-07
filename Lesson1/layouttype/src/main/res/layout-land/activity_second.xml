@@ -44,6 +44,10 @@
             android:insetRight="5dp"
             android:insetBottom="5dp"
             android:text="Button" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </TableRow>
 
     <TableRow
