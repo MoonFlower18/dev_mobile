@@ -1,8 +1,12 @@
 package com.example.layouttype;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -36,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         Button butn2 = findViewById(R.id.navbut2);
         Button butn3 = findViewById(R.id.navbut3);
         Button butn4 = findViewById(R.id.navbut4);
+        Button butn5 = findViewById(R.id.navbut5);
+        Button butn7 = findViewById(R.id.navbut7);
 
         butn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +71,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ControlLesson1.class);
+                startActivity(intent);
+            }
+        });
+
+        butn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ActivitySecond.class);
+                startActivity(intent);
+            }
+        });
+
+        butn7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName("com.example.buttonclicker", "com.example.buttonclicker.MainActivity"));
                 startActivity(intent);
             }
         });
