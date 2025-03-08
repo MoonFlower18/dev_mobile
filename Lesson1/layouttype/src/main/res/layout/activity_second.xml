@@ -44,6 +44,9 @@
             android:insetTop="5dp"
             android:insetRight="5dp"
             android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
             android:text="Button" />
 
     </TableRow>
@@ -61,6 +64,9 @@
             android:insetTop="5dp"
             android:insetRight="5dp"
             android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
             android:text="Button" />
     </TableRow>
 
@@ -77,6 +83,9 @@
             android:insetTop="5dp"
             android:insetRight="5dp"
             android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
             android:text="Button" />
 
     </TableRow>
@@ -94,6 +103,9 @@
             android:insetTop="5dp"
             android:insetRight="5dp"
             android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
             android:text="Button" />
     </TableRow>
 
@@ -110,6 +122,9 @@
             android:insetTop="5dp"
             android:insetRight="5dp"
             android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
             android:text="Button" />
 
     </TableRow>
@@ -127,6 +142,9 @@
             android:insetTop="5dp"
             android:insetRight="5dp"
             android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
             android:text="Button" />
     </TableRow>
 </TableLayout>
