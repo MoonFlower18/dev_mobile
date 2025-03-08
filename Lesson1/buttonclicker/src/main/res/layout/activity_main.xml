@@ -21,24 +21,7 @@
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.148" />
-
-    <Button
-        android:id="@+id/btnWhoAmI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="45dp"
-        android:backgroundTint="#7A9795"
-        android:text="WHO AM I?"
-        android:textColor="#F8F4E5"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnItIsNotMe"
-        app:layout_constraintHorizontal_bias="0.558"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOut"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <TextView
         android:id="@+id/tvOut"
@@ -61,16 +44,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:backgroundTint="#7A9795"
-        android:textColor="#F8F4E5"
         android:onClick="onMyButtonClick"
         android:text="IT'S NOT ME"
+        android:textColor="#F8F4E5"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.856"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOut"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <CheckBox
         android:id="@+id/checkBoxExtra"
@@ -82,18 +65,35 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOut"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.029" />
+
+    <Button
+        android:id="@+id/btnWhoAmI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#7A9795"
+        android:text="WHO AM I?"
+        android:textColor="#F8F4E5"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnItIsNotMe"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOut"
+        app:layout_constraintVertical_bias="0.034" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_width="411dp"
+        android:layout_height="73dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mini" />
+        app:srcCompat="@drawable/mini2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

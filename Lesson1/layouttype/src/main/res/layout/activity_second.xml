@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="412dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/mini2" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <EditText
             android:id="@+id/editTextText2"
@@ -21,7 +33,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button20"
@@ -38,7 +50,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button22"
@@ -54,7 +66,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button23"
@@ -71,7 +83,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button24"
@@ -87,7 +99,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button25"
@@ -104,7 +116,7 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button26"
