@@ -12,121 +12,285 @@
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mini2" />
+
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="181dp"
-        android:layout_height="97dp"
+        android:layout_width="350dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="68dp"
         android:fontFamily="@font/dancing_script"
         android:gravity="center"
-        android:text="My first beautyful text!"
-        android:textSize="30dp"
+        android:text="Welcome to my first app!"
+        android:textSize="35dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/navbut1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812" />
-
-    <Button
-        android:id="@+id/navbut3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_3"
-        app:layout_constraintBottom_toTopOf="@+id/navbut4"
-        app:layout_constraintStart_toStartOf="@+id/navbut4" />
-
-    <Button
-        android:id="@+id/navbut2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_2"
-        app:layout_constraintBottom_toTopOf="@+id/navbut3"
-        app:layout_constraintStart_toStartOf="@+id/navbut3" />
-
-    <Button
-        android:id="@+id/navbut1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_1"
-        app:layout_constraintBottom_toTopOf="@+id/navbut2"
-        app:layout_constraintStart_toStartOf="@+id/navbut2" />
-
-    <Button
-        android:id="@+id/navbut4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_4"
-        app:layout_constraintBottom_toTopOf="@+id/navbut5"
-        app:layout_constraintStart_toStartOf="@+id/navbut5" />
-
-    <Button
-        android:id="@+id/navbut5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_5"
-        app:layout_constraintBottom_toTopOf="@+id/navbut6"
-        app:layout_constraintStart_toStartOf="@+id/navbut6" />
-
-    <Button
-        android:id="@+id/navbut6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_6"
-        app:layout_constraintBottom_toTopOf="@+id/navbut7"
-        app:layout_constraintStart_toStartOf="@+id/navbut7" />
-
-    <Button
-        android:id="@+id/navbut7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_7"
-        app:layout_constraintBottom_toTopOf="@+id/navbut8"
-        app:layout_constraintStart_toStartOf="@+id/navbut8" />
-
-    <Button
-        android:id="@+id/navbut8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Задание_8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="При запуске программы тут будет другой текст"
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/main_font"
+        android:gravity="center"
+        android:text="Навигация по приложению"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.145" />
 
-    <Button
-        android:id="@+id/buttonStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Тут будет что-то другое"
+    <LinearLayout
+        android:layout_width="352dp"
+        android:layout_height="682dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewStudent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.25">
 
-    <CheckBox
-        android:id="@+id/checkBoxStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Тут будет галочка"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewStudent" />
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №1: Создание макета LinearLayout"
+            android:textSize="17dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/navbut1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
+            android:text="Перейти к макету linear_layout.xml" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №2: Создание макета TableLayout "
+            android:textSize="17dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/navbut2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
+            android:text="Перейти к макету table_layout.xml" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №3: Создание макета ConstraintLayout"
+            android:textSize="17dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/navbut3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
+            android:text="Перейти к макету constraint_layout.xml" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №4: Создание персонального экрана с учётом смены ориентации"
+            android:textSize="17dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/navbut4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
+            android:text="Перейти к странице control_lesson1.xml" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №5: Создание страницы для смены ориентации экрана"
+            android:textSize="17dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/navbut5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
+            android:text="Перейти к странице activity_second.xml" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №6: Создание обработчиков событий"
+            android:textSize="17dp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <TextView
+            android:id="@+id/textViewStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="При запуске программы тут будет другой текст"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:insetLeft="5dp"
+                android:insetTop="5dp"
+                android:insetRight="5dp"
+                android:insetBottom="5dp"
+                android:backgroundTint="#7A9795"
+                android:textColor="#F8F4E5"
+                android:textSize="15dp"
+                android:text="Что тут?" />
+
+            <CheckBox
+                android:id="@+id/checkBoxStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15dp"
+                android:text="Внимание на галочку!" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:gravity="left"
+            android:text="Задание №7: Создание кнопок - обработчиков событий"
+            android:textSize="17dp" />
+
+        <Button
+            android:id="@+id/navbut7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:backgroundTint="#7A9795"
+            android:textColor="#F8F4E5"
+            android:textSize="15dp"
+            android:text="Перейти к модулю buttonclicker" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
