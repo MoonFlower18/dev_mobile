@@ -1,6 +1,8 @@
 package com.example.buttonclicker;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tvOut = findViewById(R.id.tvOut);
         Button btnWhoAmI = findViewById(R.id.btnWhoAmI);
+        //btnWhoAmI.setBackgroundResource(R.drawable.gradient_button);
         Button btnItIsNotMe = findViewById(R.id.btnItIsNotMe);
+        //btnItIsNotMe.setBackgroundResource(R.drawable.gradient_button);
         CheckBox checkBoxExtra = findViewById(R.id.checkBoxExtra);
 
         btnWhoAmI.setOnClickListener(new View.OnClickListener() {
