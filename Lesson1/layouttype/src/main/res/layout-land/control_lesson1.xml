@@ -6,35 +6,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="350dp"
-        android:layout_height="39dp"
-        android:fontFamily="@font/main_font"
-        android:gravity="center"
-        android:text="Информация о поездке"
-        android:textSize="27dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView13"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="325dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="3dp"
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отправить отзыв"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/checkBox9"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/checkBox9"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33"
-        app:srcCompat="@drawable/taxi"
-        tools:srcCompact="@drawable/ic_launcher_background" />
+        app:layout_constraintVertical_bias="0.955" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="375dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/main_font"
+        android:text="Чистота"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="375dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="304dp"
+        android:max="10"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="280dp"
+        android:gravity="center"
+        android:text="😡"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView9"
@@ -50,119 +72,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.119" />
-
-    <RatingBar
-        android:id="@+id/ratingBar2"
-        android:layout_width="246dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView9"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="299dp"
-        android:layout_height="23dp"
-        android:fontFamily="@font/main_font"
-        android:gravity="left"
-        android:text="Ваши впечатления от поездки?"
-        android:textSize="20dp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.73"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="30dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="375dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/main_font"
-        android:text="Чистота"
-        android:textSize="17dp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox4"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="29dp"
-        android:layout_height="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.847"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@android:drawable/ic_menu_info_details" />
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Отправить отзыв"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox9"
-        app:layout_constraintStart_toStartOf="@+id/checkBox9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.955" />
-
-    <CheckBox
-        android:id="@+id/checkBox9"
-        android:layout_width="375dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/main_font"
-        android:text="Приятная музыка"
-        android:textSize="17dp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox11"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="375dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="304dp"
-        android:max="10"
-        android:progress="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.526" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="375dp"
-        android:layout_height="29dp"
-        android:layout_marginBottom="208dp"
-        android:fontFamily="@font/main_font"
-        android:text="Комфортное вождение"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.832"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.562" />
-
-    <CheckBox
-        android:id="@+id/checkBox10"
-        android:layout_width="375dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/main_font"
-        android:text="Вежливость"
-        android:textSize="17dp"
-        app:layout_constraintStart_toStartOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintVertical_bias="0.147" />
 
     <TextView
         android:id="@+id/textView16"
@@ -179,18 +89,56 @@
         app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:layout_constraintVertical_bias="0.862" />
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox9"
+        android:layout_width="375dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/main_font"
+        android:text="Приятная музыка"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox11"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox11" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="325dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.435"
+        app:srcCompat="@drawable/taxi"
+        tools:srcCompact="@drawable/ic_launcher_background" />
 
     <CheckBox
         android:id="@+id/checkBox11"
         android:layout_width="375dp"
         android:layout_height="29dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/main_font"
         android:text="Хорошее настроение"
         android:textSize="17dp"
         app:layout_constraintStart_toStartOf="@+id/checkBox10"
         app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="246dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView15"
@@ -205,22 +153,88 @@
         app:layout_constraintHorizontal_bias="0.897"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="280dp"
+        android:id="@+id/textView12"
+        android:layout_width="350dp"
+        android:layout_height="39dp"
+        android:fontFamily="@font/main_font"
         android:gravity="center"
-        android:text="😡"
+        android:text="Информация о поездке"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/checkBox10"
+        android:layout_width="375dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/main_font"
+        android:text="Вежливость"
+        android:textSize="17dp"
+        app:layout_constraintStart_toStartOf="@+id/checkBox2"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="299dp"
+        android:layout_height="23dp"
+        android:fontFamily="@font/main_font"
+        android:gravity="left"
+        android:text="Ваши впечатления от поездки?"
         android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="29dp"
+        android:layout_height="23dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="375dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="208dp"
+        android:fontFamily="@font/main_font"
+        android:text="Комфортное вождение"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.832"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="924dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/mini_land_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

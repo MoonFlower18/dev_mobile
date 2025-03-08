@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="924dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/mini_land_1" />
+    </TableRow>
 
     <TableRow
         android:layout_width="match_parent"
@@ -25,7 +38,7 @@
 
         <Button
             android:id="@+id/button20"
-            android:layout_width="286dp"
+            android:layout_width="900dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:insetLeft="5dp"
@@ -36,7 +49,7 @@
 
         <Button
             android:id="@+id/button22"
-            android:layout_width="286dp"
+            android:layout_width="940dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:insetLeft="5dp"

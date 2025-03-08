@@ -22,6 +22,7 @@
         <activity android:name=".TableActivity"></activity>
         <activity android:name=".ConstraintLayout"></activity>
         <activity android:name=".ControlLesson1"></activity>
+        <activity android:name=".ActivitySecond"></activity>
 
     </application>
 
