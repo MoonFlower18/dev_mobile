@@ -101,7 +101,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/main_font"
             android:gravity="left"
-            android:text="Задание №2: Создание макета TableLayout "
+            android:text="Задание №2: Создание макета TableLayout"
             android:textSize="17dp" />
 
         <Space
