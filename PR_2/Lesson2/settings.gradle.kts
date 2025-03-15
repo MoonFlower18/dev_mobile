@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "lesson2"
 include(":app")
- 
+include(":activitylifecycle")
