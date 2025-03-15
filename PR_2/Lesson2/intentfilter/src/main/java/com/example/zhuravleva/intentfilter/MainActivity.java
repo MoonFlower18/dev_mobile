@@ -1,6 +1,11 @@
 package com.example.zhuravleva.intentfilter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +25,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void onClick (View view) {
+        Uri address = Uri.parse("https://www.mirea.ru/");
+        Intent openLinkIntent = new Intent(Intent.ACTION_VIEW, address);
+        startActivity(openLinkIntent);
     }
 }
