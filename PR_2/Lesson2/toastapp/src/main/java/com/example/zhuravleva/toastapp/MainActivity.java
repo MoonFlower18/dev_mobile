@@ -1,6 +1,9 @@
 package com.example.zhuravleva.toastapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,16 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void onClickToast (View view) {
+
+        EditText editText = findViewById(R.id.editTextText);
+        String inputText = editText.getText().toString();
+        int charCount = inputText.length();
+        String message = "СТУДЕНТ № 13 ГРУППА БИСО-01-20 Количество символов - " + charCount;
+
+        Toast toast = Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG);
+        toast.show();
     }
 }
