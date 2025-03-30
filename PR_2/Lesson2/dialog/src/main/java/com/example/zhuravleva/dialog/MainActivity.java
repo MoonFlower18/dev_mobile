@@ -55,4 +55,9 @@ public class MainActivity extends AppCompatActivity {
         timeDialog.show(getSupportFragmentManager(), "time");
     }
 
+    public void onClickShowDatePicker(View view) {
+        MyDateDialogFragment dateDialog = new MyDateDialogFragment();
+        dateDialog.show(getSupportFragmentManager(), "date");
+    }
+
 }
