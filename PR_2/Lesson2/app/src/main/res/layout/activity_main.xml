@@ -8,12 +8,177 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="@font/aclonica"
+        android:text="Practical task №2"
+        android:textColor="#4a362c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.053" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#ebbaae"
+        android:fontFamily="serif"
+        android:text="Открыть модуль MultiActivity"
+        android:textColor="#853c2a"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Задание №4: всплывающие подсказки"
+        android:textColor="#4a362c"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Задание №3:  вызов неявных намерений"
+        android:textColor="#4a362c"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#ebbaae"
+        android:fontFamily="serif"
+        android:text="Открыть модуль ActivityLifecycle"
+        android:textColor="#853c2a"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:fontFamily="serif"
+        android:text="Задание №2: вызов явных намерений"
+        android:textColor="#4a362c"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Задание №5: панельные уведомления"
+        android:textColor="#4a362c"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="516dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#ebbaae"
+        android:fontFamily="serif"
+        android:text="Открыть модуль IntentFilter"
+        android:textColor="#853c2a"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#ebbaae"
+        android:fontFamily="serif"
+        android:text="Открыть модуль ToastApp"
+        android:textColor="#853c2a"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="456dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="380dp"
+        android:fontFamily="serif"
+        android:text="Задание №1: жизненный цикл Activity"
+        android:textColor="#4a362c"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.104" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Задание №6: диалоговые окна"
+        android:textColor="#4a362c"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="604dp" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#ebbaae"
+        android:fontFamily="serif"
+        android:text="Открыть модуль Dialog"
+        android:textColor="#853c2a"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="630dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="344dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#ebbaae"
+        android:fontFamily="serif"
+        android:text="Открыть модуль NotificationApp"
+        android:textColor="#853c2a"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="542dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1100px"
+        android:layout_height="200px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/flow" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
