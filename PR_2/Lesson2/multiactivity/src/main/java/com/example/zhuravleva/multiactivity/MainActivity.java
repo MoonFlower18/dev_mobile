@@ -35,14 +35,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickNewActivity(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickNewActivity2(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
 
         EditText editText = findViewById(R.id.edit_text);
         Button sendButton = findViewById(R.id.send_button);
         String textToSend = editText.getText().toString();
 
+        // intent.putExtra("key", "MIREA - ЖУРАВЛЕВА ЮЛИЯ СЕРГЕЕВНА");
         intent.putExtra("key", textToSend);
-
-//        intent.putExtra("key", "MIREA - ЖУРАВЛЕВА ЮЛИЯ СЕРГЕЕВНА");
         startActivity(intent);
     }
 
