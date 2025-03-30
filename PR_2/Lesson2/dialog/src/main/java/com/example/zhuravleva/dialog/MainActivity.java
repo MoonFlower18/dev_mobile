@@ -60,4 +60,9 @@ public class MainActivity extends AppCompatActivity {
         dateDialog.show(getSupportFragmentManager(), "date");
     }
 
+    public void onClickShowProgressDialog(View view) {
+        MyProgressDialogFragment progressDialog = new MyProgressDialogFragment();
+        progressDialog.show(getSupportFragmentManager(), "date");
+    }
+
 }
