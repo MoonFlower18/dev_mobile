@@ -20,155 +20,222 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.035" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/navbut2"
         android:layout_width="344dp"
         android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#ebbaae"
         android:fontFamily="serif"
         android:text="Открыть модуль MultiActivity"
         android:textColor="#853c2a"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="285dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="33dp"
         android:fontFamily="serif"
         android:text="Задание №4: всплывающие подсказки"
         android:textColor="#4a362c"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="430dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut3"
+        app:layout_constraintVertical_bias="0.048" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="serif"
         android:text="Задание №3:  вызов неявных намерений"
         android:textColor="#4a362c"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="345dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut2"
+        app:layout_constraintVertical_bias="0.024" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/navbut1"
         android:layout_width="344dp"
         android:layout_height="42dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="38dp"
         android:backgroundTint="#ebbaae"
         android:fontFamily="serif"
         android:text="Открыть модуль ActivityLifecycle"
         android:textColor="#853c2a"
         android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.01" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="31dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginEnd="38dp"
         android:fontFamily="serif"
         android:text="Задание №2: вызов явных намерений"
         android:textColor="#4a362c"
         android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="259dp" />
+        app:layout_constraintTop_toBottomOf="@+id/navbut1"
+        app:layout_constraintVertical_bias="0.031" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="36dp"
         android:fontFamily="serif"
         android:text="Задание №5: панельные уведомления"
         android:textColor="#4a362c"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="516dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut4"
+        app:layout_constraintVertical_bias="0.064" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/navbut3"
         android:layout_width="344dp"
         android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#ebbaae"
         android:fontFamily="serif"
         android:text="Открыть модуль IntentFilter"
         android:textColor="#853c2a"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="371dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.016" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/navbut4"
         android:layout_width="344dp"
         android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#ebbaae"
         android:fontFamily="serif"
         android:text="Открыть модуль ToastApp"
         android:textColor="#853c2a"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="456dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="380dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="33dp"
         android:fontFamily="serif"
         android:text="Задание №1: жизненный цикл Activity"
         android:textColor="#4a362c"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="107dp"
         android:fontFamily="serif"
         android:text="Задание №6: диалоговые окна"
         android:textColor="#4a362c"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="604dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut5"
+        app:layout_constraintVertical_bias="0.083" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/navbut6"
         android:layout_width="344dp"
         android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="36dp"
         android:backgroundTint="#ebbaae"
         android:fontFamily="serif"
         android:text="Открыть модуль Dialog"
         android:textColor="#853c2a"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="630dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.043" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/navbut5"
         android:layout_width="344dp"
         android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#ebbaae"
         android:fontFamily="serif"
         android:text="Открыть модуль NotificationApp"
         android:textColor="#853c2a"
         android:textSize="16dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="542dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView"
