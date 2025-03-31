@@ -10,6 +10,8 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Calendar;
+
 public class MyDateDialogFragment extends DialogFragment{
 
     private void showSnackBar(View anchorView, String message) {
@@ -21,9 +23,10 @@ public class MyDateDialogFragment extends DialogFragment{
     @Override
     public android.app.Dialog onCreateDialog(Bundle savedInstanceState) {
 
-        int year = 2000;
-        int month = 01;
-        int day = 01;
+        Calendar calendar = Calendar.getInstance();
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(
                 requireContext(),

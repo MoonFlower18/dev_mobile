@@ -3,6 +3,7 @@ package com.example.zhuravleva.dialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -15,7 +16,9 @@ public class MyProgressDialogFragment extends DialogFragment {
     @Override
     public android.app.Dialog onCreateDialog(Bundle savedInstanceState) {
         ProgressDialog progressDialog = new ProgressDialog(requireContext());
-        showSnackBar(getView(), "Загрузка");
+        String progress_text = "Идёт загрузка диалогового окна...";
+        showSnackBar(getView(), "Идёт загрузка диалогового окна...");
+        Toast.makeText(requireContext(), progress_text, Toast.LENGTH_LONG).show();
 
         progressDialog.show();
         return progressDialog;

@@ -11,14 +11,16 @@ import androidx.fragment.app.DialogFragment;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Calendar;
+
 public class MyTimeDialogFragment extends DialogFragment {
 
     @NonNull
     @Override
     public android.app.Dialog onCreateDialog(Bundle savedInstanceState) {
-        // вместо фикса можно настроить хостовое
-        int hour = 0;
-        int minute = 0;
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
 
         TimePickerDialog timePickerDialog = new TimePickerDialog(
                 requireContext(),
