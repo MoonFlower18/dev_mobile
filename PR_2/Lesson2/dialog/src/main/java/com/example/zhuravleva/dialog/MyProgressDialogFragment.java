@@ -16,8 +16,9 @@ public class MyProgressDialogFragment extends DialogFragment {
     @Override
     public android.app.Dialog onCreateDialog(Bundle savedInstanceState) {
         ProgressDialog progressDialog = new ProgressDialog(requireContext());
-        String progress_text = "Идёт загрузка диалогового окна...";
-        showSnackBar(getView(), "Идёт загрузка диалогового окна...");
+        progressDialog.setMessage("Начинаем взлом Пентагона...");
+        String progress_text = "Установка соединения...";
+        showSnackBar(getView(), "Загрузка вируса для атаки...");
         Toast.makeText(requireContext(), progress_text, Toast.LENGTH_LONG).show();
 
         progressDialog.show();
