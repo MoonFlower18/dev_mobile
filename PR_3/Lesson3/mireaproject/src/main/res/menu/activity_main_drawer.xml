@@ -17,12 +17,12 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
         <item
-            android:id="@+id/nav_fragment_data"
-            android:icon="@android:drawable/btn_star_big_on"
+            android:id="@+id/nav_data"
+            android:icon="@drawable/baseline_air_24"
             android:title="Fragment Data" />
         <item
-            android:id="@+id/nav_WebViewFragment"
-            android:icon="@android:drawable/ic_menu_mapmode"
+            android:id="@+id/nav_webview"
+            android:icon="@drawable/baseline_wb_cloudy_24"
             android:title="WebViewFragment" />
     </group>
 </menu>
