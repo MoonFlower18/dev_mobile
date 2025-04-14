@@ -7,13 +7,230 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль MireaProject"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.076" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/textView8"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:fontFamily="serif"
+        android:text="Задание №4: Вызов системных приложений"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="340dp"
+        android:layout_height="32dp"
+        android:fontFamily="serif"
+        android:text="Задание №3: Получение данных"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="240dp"
+        android:fontFamily="serif"
+        android:text="Задание №5: Реализация фрагментов приложения"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="228dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль SimpleFragmentApp"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.625" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="560dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль Sharer"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="344dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="604dp"
+        android:fontFamily="serif"
+        android:text="Задание №2: Обмен данными"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.484" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль FavoriteBook"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="serif"
+        android:text="Задание №1: Передача данных с помощью Intent "
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="644dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль IntentApp"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="339dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="172dp"
+        android:fontFamily="serif"
+        android:text="Задание №6: Контрольное задание"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="276dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль SystemIntentsApp"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1100px"
+        android:layout_height="200px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tech" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Практическая работа №3"
+        android:textColor="#081230"
+        android:textSize="24dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.024" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

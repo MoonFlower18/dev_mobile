@@ -9,16 +9,20 @@
 
     <TextView
         android:id="@+id/textViewMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="378dp"
+        android:layout_height="79dp"
         android:layout_marginBottom="22dp"
+        android:fontFamily="serif"
+        android:gravity="center"
         android:text="Тут появится название вашей любимой книги и любимая цитата из нее!"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_send"
+        android:textColor="#081230"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
 
     <Button
         android:id="@+id/button_send"
@@ -26,12 +30,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
         android:layout_marginEnd="112dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
         android:text="Открыть экран ввода данных"
+        android:textColor="#081230"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMessage"
+        app:layout_constraintVertical_bias="0.014" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="1100px"
+        android:layout_height="200px"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tech" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

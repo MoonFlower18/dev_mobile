@@ -9,69 +9,92 @@
 
     <EditText
         android:id="@+id/editTextBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="125dp"
+        android:layout_width="385dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif"
         android:hint="Введите название  Вашей любимой книги"
-        app:layout_constraintBottom_toTopOf="@+id/sendButton"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextQuote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="43dp"
-        android:layout_marginBottom="37dp"
-        android:hint="Введите цитату из  Вашей любимой книги"
-        app:layout_constraintBottom_toTopOf="@+id/sendButton"
+        android:layout_width="385dp"
+        android:layout_height="45dp"
+        android:fontFamily="serif"
+        android:hint="Введите цитату из Вашей любимой книги"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBook" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.013" />
 
     <Button
         android:id="@+id/sendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginEnd="156dp"
-        android:text="Отправить"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Отправить данные в первую активность"
+        android:textColor="#081230"
+        android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextQuote"
+        app:layout_constraintVertical_bias="0.035" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="serif"
         android:text="Любимая книга разработчика"
-        app:layout_constraintBottom_toTopOf="@+id/editTextBook"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.108"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginBottom="9dp"
+        android:fontFamily="serif"
         android:text="Цитата из книги"
-        app:layout_constraintBottom_toTopOf="@+id/editTextQuote"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBook"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="1100px"
+        android:layout_height="200px"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBook" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tech" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
