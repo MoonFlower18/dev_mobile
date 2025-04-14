@@ -10,6 +10,9 @@ import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     String bookName = data.getStringExtra(BOOK_NAME_KEY);
                     String quote = data.getStringExtra(QUOTES_KEY);
 
-                    String resultText = "Название Вашей любимой книги: " + bookName + "\nЦитата: " + quote;
+                    String resultText = "Название Вашей любимой книги: \n" + bookName + "\n\nЦитата: \n" + quote;
 
                     textViewMessage.setText(resultText);
                 }
@@ -50,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, ShareActivity.class);
             activityResultLauncher.launch(intent);
+        });
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
     }
 }
