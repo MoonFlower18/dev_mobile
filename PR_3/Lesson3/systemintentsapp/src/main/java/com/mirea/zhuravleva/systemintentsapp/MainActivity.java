@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         buttonCall.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:89811112233"));
+                intent.setData(Uri.parse("tel:+74996008080"));
                 startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMap.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("geo:55.749479,37.613944"));
+                intent.setData(Uri.parse("geo:55.794259, 37.701448"));
                 startActivity(intent);
             }
         });

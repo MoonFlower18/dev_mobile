@@ -9,11 +9,12 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="314dp"
+        android:layout_height="151dp"
         android:layout_marginBottom="546dp"
         android:fontFamily="serif"
-        android:text="Это вторая активность!"
+        android:text="А тут будет другой текст!"
+        android:gravity="center"
         android:textColor="#081230"
         android:textSize="17dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/nav_fragment_data"
     tools:context=".DataFragment">
 
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="123456789" />
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="1100px"
+            android:layout_height="200px"
+            android:src="@drawable/tech"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="378dp"
+            android:layout_height="340dp"
+            android:fontFamily="serif"
+            android:text="Material You — это концепция дизайна интерфейсов мобильных устройств от корпорации Google.
+            \n\nНекоторые критерии и особенности стандартов Material You:
+            \n - персонализация;
+            \n - адаптивные компоненты;
+            \n - динамические цвета;
+            \n - тёмный режим Everything;
+            \n - улучшенная панель уведомлений и анимация;
+            \n - усовершенствование виджетов."
+            android:textColor="#081230"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.073" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="380dp"
+            android:layout_height="235dp"
+            android:src="@drawable/banner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.483"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.019" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

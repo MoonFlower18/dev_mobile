@@ -7,8 +7,39 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="344dp"
+        android:layout_height="31dp"
+        android:fontFamily="serif"
+        android:text="Задание №2: Обмен данными"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut1"
+        app:layout_constraintVertical_bias="0.026" />
+
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/navbut5"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль SimpleFragmentApp"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <Button
+        android:id="@+id/navbut6"
         android:layout_width="343dp"
         android:layout_height="44dp"
         android:backgroundTint="#78a9eb"
@@ -18,10 +49,41 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.064" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="339dp"
+        android:layout_height="31dp"
+        android:fontFamily="serif"
+        android:text="Задание №6: Контрольное задание"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut5"
+        app:layout_constraintVertical_bias="0.085" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:fontFamily="serif"
+        android:text="Задание №5: Реализация фрагментов приложения"
+        android:textColor="#081230"
+        android:textSize="17dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut4"
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/textView8"
@@ -34,10 +96,41 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintTop_toBottomOf="@+id/navbut3"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <Button
+        android:id="@+id/navbut2"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль Sharer"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <Button
+        android:id="@+id/navbut4"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#78a9eb"
+        android:fontFamily="serif"
+        android:text="Открыть модуль SystemIntentsApp"
+        android:textColor="#081230"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/textView5"
@@ -50,80 +143,13 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/navbut2"
         app:layout_constraintVertical_bias="0.026" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="343dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="240dp"
-        android:fontFamily="serif"
-        android:text="Задание №5: Реализация фрагментов приложения"
-        android:textColor="#081230"
-        android:textSize="17dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        app:layout_constraintVertical_bias="0.2" />
-
     <Button
-        android:id="@+id/button5"
-        android:layout_width="343dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="228dp"
-        android:backgroundTint="#78a9eb"
-        android:fontFamily="serif"
-        android:text="Открыть модуль SimpleFragmentApp"
-        android:textColor="#081230"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.625" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="343dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="560dp"
-        android:backgroundTint="#78a9eb"
-        android:fontFamily="serif"
-        android:text="Открыть модуль Sharer"
-        android:textColor="#081230"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="344dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="604dp"
-        android:fontFamily="serif"
-        android:text="Задание №2: Обмен данными"
-        android:textColor="#081230"
-        android:textSize="17dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.484" />
-
-    <Button
-        android:id="@+id/button4"
+        android:id="@+id/navbut3"
         android:layout_width="343dp"
         android:layout_height="44dp"
         android:backgroundTint="#78a9eb"
@@ -133,16 +159,15 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="343dp"
         android:layout_height="52dp"
-        android:layout_marginTop="24dp"
         android:fontFamily="serif"
         android:text="Задание №1: Передача данных с помощью Intent "
         android:textColor="#081230"
@@ -152,14 +177,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/navbut1"
         android:layout_width="343dp"
         android:layout_height="44dp"
-        android:layout_marginBottom="644dp"
         android:backgroundTint="#78a9eb"
         android:fontFamily="serif"
         android:text="Открыть модуль IntentApp"
@@ -167,44 +190,9 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.225" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="339dp"
-        android:layout_height="31dp"
-        android:layout_marginBottom="172dp"
-        android:fontFamily="serif"
-        android:text="Задание №6: Контрольное задание"
-        android:textColor="#081230"
-        android:textSize="17dp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        app:layout_constraintVertical_bias="0.483" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="343dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="276dp"
-        android:backgroundTint="#78a9eb"
-        android:fontFamily="serif"
-        android:text="Открыть модуль SystemIntentsApp"
-        android:textColor="#081230"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.01" />
 
     <ImageView
         android:id="@+id/imageView"
