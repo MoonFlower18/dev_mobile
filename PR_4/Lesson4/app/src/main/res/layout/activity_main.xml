@@ -46,15 +46,4 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewMirea"
         app:layout_constraintVertical_bias="0.125" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.mirea.zhuravleva.Lesson4.GalleryFragment"
-        android:layout_width="334dp"
-        android:layout_height="397dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMirea"
-        app:layout_constraintVertical_bias="0.325" />
 </androidx.constraintlayout.widget.ConstraintLayout>
