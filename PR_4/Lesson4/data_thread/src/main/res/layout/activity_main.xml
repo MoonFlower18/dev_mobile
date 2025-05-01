@@ -8,12 +8,34 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:lines="10"
+
+        android:maxLines="10"
         android:text="Hello World!"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="347dp"
+        android:layout_height="358dp"
+        android:text="Различия между потоками заключаются в их последовательности: \n
+        1. Метод .runOnUiThread в потоке runn1 используется для выполнения кода непосредственно на UI-потоке; \n
+        2. Метод .postDelayed в потоке runn3 используется для отложенного выполнения на UI-потоке; \n
+        3. Метод .post в потоке runn2 используется для выполнения сразу же без задержки, но по мере того, как главный поток будет готов обработать очереди.
+        \n\nПоследовательность запуска:\nСначала приложение ждёт 2 секунды, а потом запускает runn1. Затем запускается отложенная отправка runn3 и через 1 секунду выполняется следующий runn2. Так как отложенное исполнение у нас длится 2 секунды (2000 миллисекунд), то через ещё 1 секунду исполнится runn3."
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo"
+        app:layout_constraintVertical_bias="0.325" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
