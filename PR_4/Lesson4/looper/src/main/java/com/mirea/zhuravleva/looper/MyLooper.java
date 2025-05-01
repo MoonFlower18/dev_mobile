@@ -24,7 +24,7 @@ public class MyLooper extends Thread {
                 int	count = data.length();
                 Message	message = new Message();
                 Bundle bundle = new	Bundle();
-                bundle.putString("result", String.format("The number of letters	in the word %s is %d", data, count));
+                bundle.putString("result", String.format("The number of letters in the word %s is %d", data, count));
                 message.setData(bundle);
 // Send the message back to main thread message queue use main thread message Handler.
                 mainHandler.sendMessage(message);

@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Handler mainThreadHandler = new Handler(Looper.getMainLooper())	{
             @Override
             public void handleMessage(Message msg) {
-                Log.d(MainActivity.class.getSimpleName(), "Task execute. This is result:	" + msg.getData().getString("result"));
+                Log.d(MainActivity.class.getSimpleName(), "Task execute. This is result: " + msg.getData().getString("result"));
             }
         };
         MyLooper myLooper = new	MyLooper(mainThreadHandler);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Message	msg = Message.obtain();
-                Bundle bundle = new	Bundle();
+                Bundle bundle =	new	Bundle();
                 bundle.putString("KEY",	"mirea");
                 msg.setData(bundle);
                 myLooper.mHandler.sendMessage(msg);
