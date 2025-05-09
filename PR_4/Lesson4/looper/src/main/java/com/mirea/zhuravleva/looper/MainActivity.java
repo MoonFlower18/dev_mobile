@@ -29,20 +29,31 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg) {
                 Log.d(MainActivity.class.getSimpleName(), "Task execute. This is result: " + msg.getData().getString("result"));
+                Log.d(MainActivity.class.getSimpleName(), "Task execute. This is result: " + msg.getData().getString("result2"));
             }
         };
         MyLooper myLooper = new	MyLooper(mainThreadHandler);
         myLooper.start();
 
         binding.editTextTextMirea.setText("Мой номер по списку №13");
+
         binding.buttonMirea.setOnClickListener(new	View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Message	msg = Message.obtain();
                 Bundle bundle =	new	Bundle();
                 bundle.putString("KEY",	"mirea");
+                bundle.putString("KEY2", "mirea2");
+                bundle.putString("KEY3", "mirea3");
                 msg.setData(bundle);
                 myLooper.mHandler.sendMessage(msg);
+            }
+        });
+
+        binding.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
