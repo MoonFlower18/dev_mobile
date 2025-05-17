@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.editTextTextMirea.setText("Мой номер по списку №13");
 
-        binding.buttonMirea.setOnClickListener(new	View.OnClickListener() {
+        binding.buttonMirea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Message	msg = Message.obtain();
@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("KEY",	"mirea");
                 bundle.putString("KEY2", "mirea2");
                 bundle.putString("KEY3", "mirea3");
+
+                // сделать переменные, которые будут принимать число из эдита
+                // задержку делать через timeout sleep
+
                 msg.setData(bundle);
                 myLooper.mHandler.sendMessage(msg);
             }

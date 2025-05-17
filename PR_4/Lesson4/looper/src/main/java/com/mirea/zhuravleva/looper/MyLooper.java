@@ -19,7 +19,7 @@ public class MyLooper extends Thread {
         mHandler = new Handler(Looper.myLooper()) {
             public void	handleMessage(Message msg) {
                 String data = msg.getData().getString("KEY");
-                Log.d("MyLooper	get	message: ", data);
+                Log.d("MyLooper get message: ", data);
 
                 String data2 = msg.getData().getString("KEY2");
                 Log.d("MyLooper2 get message: ", data2);
