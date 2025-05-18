@@ -7,6 +7,8 @@ import android.util.Log;
 
 import android.os.Handler;
 
+import java.util.concurrent.TimeUnit;
+
 public class MyLooper extends Thread {
     public Handler mHandler;
     private Handler mainHandler;
@@ -27,13 +29,29 @@ public class MyLooper extends Thread {
                 String data3 = msg.getData().getString("KEY3");
                 Log.d("MyLooper3 get message: ", data3);
 
+                int delay = 0;
+                try {
+                    delay = Integer.parseInt(data2);
+                } catch (NumberFormatException e) {
+                    Log.e("MyLooper", "Invalid number format for delay: " + data2);
+                }
+
+                try {
+                    if (delay > 0) {
+                        TimeUnit.SECONDS.sleep(delay);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
                 int	count = data.length();
                 Message	message = new Message();
                 Bundle bundle = new	Bundle();
+
                 bundle.putString("result", String.format("The number of letters in the word %s is %d", data, count));
-                bundle.putString("result2", String.format("The %s and %s", data2, data3));
+                bundle.putString("result2", String.format("My age is %s and my work is %s", data2, data3));
+
                 message.setData(bundle);
-// Send the message back to main thread message queue use main thread message Handler.
                 mainHandler.sendMessage(message);
             }
         };
