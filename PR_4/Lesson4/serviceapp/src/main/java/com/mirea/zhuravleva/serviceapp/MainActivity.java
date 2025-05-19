@@ -29,7 +29,6 @@ public class MainActivity  extends  AppCompatActivity  {
       binding  = ActivityMainBinding.inflate(getLayoutInflater());
       View view  =  binding.getRoot();
       setContentView(view);
-
       if  (ContextCompat.checkSelfPermission(this,  POST_NOTIFICATIONS)  ==  PackageManager.PERMISSION_GRANTED)  {
          Log.d(MainActivity.class.getSimpleName().toString(),  "Разрешения  получены");
       }  else  {

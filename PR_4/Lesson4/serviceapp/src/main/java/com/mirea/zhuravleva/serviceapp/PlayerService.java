@@ -1,5 +1,7 @@
 package com.mirea.zhuravleva.serviceapp;
 
+
+
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -44,7 +46,7 @@ public class PlayerService extends Service {
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setStyle(new NotificationCompat.BigTextStyle()
-                        .bigText("best player..."))
+                        .bigText("name_track"))
                 .setContentTitle("Music Player");
         int importance = NotificationManager.IMPORTANCE_DEFAULT;
         NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Student Zhuravleva Y.S. Notification", importance);
