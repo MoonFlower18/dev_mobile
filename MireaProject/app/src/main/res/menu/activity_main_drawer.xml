@@ -24,5 +24,9 @@
             android:id="@+id/nav_webview"
             android:icon="@drawable/baseline_backup_24"
             android:title="WebViewFragment" />
+        <item
+            android:id="@+id/nav_Worker"
+            android:icon="@drawable/baseline_api_24"
+            android:title="Worker Fragment" />
     </group>
 </menu>

@@ -35,4 +35,10 @@
         android:label="fragment_web_view"
         tools:layout="@layout/fragment_web_view" />
 
+    <fragment
+        android:id="@+id/nav_Worker"
+        android:name="com.mirea.zhuravleva.mireaproject.WorkerFragment"
+        android:label="fragment_worker"
+        tools:layout="@layout/fragment_worker" />
+
 </navigation>
