@@ -5,11 +5,13 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.BatteryManager;
 import android.os.Bundle;
+import android.os.Environment;
+import android.os.StatFs;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.CheckBox;
 
 import androidx.fragment.app.Fragment;
 import androidx.work.OneTimeWorkRequest;
@@ -18,10 +20,10 @@ import androidx.work.WorkRequest;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link WorkerFragment#newInstance} factory method to
+ * Use the {@link Background_Worker#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class WorkerFragment extends Fragment {
+public class Background_Worker extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +34,7 @@ public class WorkerFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public WorkerFragment() {
+    public Background_Worker() {
         // Required empty public constructor
     }
 
@@ -45,8 +47,8 @@ public class WorkerFragment extends Fragment {
      * @return A new instance of fragment WebViewFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static WorkerFragment newInstance(String param1, String param2) {
-        WorkerFragment fragment = new WorkerFragment();
+    public static Background_Worker newInstance(String param1, String param2) {
+        Background_Worker fragment = new Background_Worker();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,29 +68,42 @@ public class WorkerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_worker, container, false);
+        View view = inflater.inflate(R.layout.background_worker, container, false);
+
+        CheckBox checkBox  = view.findViewById(R.id.checkBox);
+        CheckBox checkBox2  = view.findViewById(R.id.checkBox2);
+        CheckBox checkBox3  = view.findViewById(R.id.checkBox3);
+        CheckBox checkBox4  = view.findViewById(R.id.checkBox4);
 
         Button button = view.findViewById(R.id.button);
-        Button button2 = view.findViewById(R.id.button2);
-
-        TextView textView = view.findViewById(R.id.textView3);
-        TextView textView2 = view.findViewById(R.id.textView4);
 
         button.setOnClickListener(v -> {
             if (isInternetAvailable()) {
-                textView.setText("11111");
+                checkBox.setChecked(true);
                 startMyWorker();
             } else {
-                textView.setText("2222");
+                checkBox.setChecked(false);
             }
-        });
 
-        button2.setOnClickListener(v -> {
             if (isDeviceCharging()) {
-                textView2.setText("333");
+                checkBox2.setChecked(true);
                 startMyWorker();
             } else {
-                textView2.setText("4444");
+                checkBox2.setChecked(false);
+            }
+
+            if (isBatteryNotLow()) {
+                checkBox3.setChecked(true);
+                startMyWorker();
+            } else {
+                checkBox3.setChecked(false);
+            }
+
+            if (isStorageNotLow()) {
+                checkBox4.setChecked(true);
+                startMyWorker();
+            } else {
+                checkBox4.setChecked(false);
             }
         });
         return view;
@@ -103,6 +118,18 @@ public class WorkerFragment extends Fragment {
     private boolean isDeviceCharging() {
         BatteryManager batteryManager = (BatteryManager) getActivity().getSystemService(Context.BATTERY_SERVICE);
         return batteryManager.isCharging();
+    }
+
+    private boolean isBatteryNotLow() {
+        BatteryManager batteryManager = (BatteryManager) getActivity().getSystemService(Context.BATTERY_SERVICE);
+        return batteryManager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY) > 20;
+    }
+
+    private boolean isStorageNotLow() {
+        StatFs stat = new StatFs(Environment.getDataDirectory().getPath());
+        long availableBytes = (long) stat.getAvailableBlocks() * (long) stat.getBlockSize();
+        long minRequiredSpace = 100 * 1024 * 1024; // 100 МБ
+        return availableBytes > minRequiredSpace;
     }
 
     private void startMyWorker() {

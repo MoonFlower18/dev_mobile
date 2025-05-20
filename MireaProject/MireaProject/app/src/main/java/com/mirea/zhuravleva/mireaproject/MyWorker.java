@@ -22,7 +22,7 @@ public class MyWorker extends Worker {
     public Result doWork() {
         Log.d(TAG, "doWork: start");
         try {
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
