@@ -16,5 +16,13 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_data"
+            android:icon="@drawable/baseline_article_24"
+            android:title="Fragment Data" />
+        <item
+            android:id="@+id/nav_webview"
+            android:icon="@drawable/baseline_backup_24"
+            android:title="WebViewFragment" />
     </group>
 </menu>
