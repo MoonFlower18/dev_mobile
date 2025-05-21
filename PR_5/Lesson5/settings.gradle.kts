@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Lesson5"
 include(":app")
- 
+include(":sensorview")
+include(":accelerometer")
