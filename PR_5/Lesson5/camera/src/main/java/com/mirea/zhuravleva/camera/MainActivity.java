@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-        ActivityResultLauncher<Intent> cameraActivityResultLauncher =  registerForActivityResult(
+        ActivityResultLauncher<Intent> cameraActivityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 callback);
 
