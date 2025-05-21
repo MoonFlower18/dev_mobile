@@ -40,15 +40,15 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        //мб так, чтобы они все выводились вниз? не стираясь и со временем хмм
+        //как доп вариант можно сделать так, чтобы они все выводились вниз, не стираясь со временем (но я устала уже, поэтому делать не буду)
 
         Thread t = new Thread(new Runnable() {
             public void run() {
                 try {
-                    TimeUnit.SECONDS.sleep(2);
+                    TimeUnit.SECONDS.sleep(5);
                     runOnUiThread(runn1);
-                    TimeUnit.SECONDS.sleep(1);
-                    binding.tvInfo.postDelayed(runn3, 2000);
+                    TimeUnit.SECONDS.sleep(3);
+                    binding.tvInfo.postDelayed(runn3, 5000);
                     binding.tvInfo.post(runn2);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

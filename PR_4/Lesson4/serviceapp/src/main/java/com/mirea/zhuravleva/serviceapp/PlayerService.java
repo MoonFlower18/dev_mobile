@@ -37,16 +37,17 @@ public class PlayerService extends Service {
         });
         return super.onStartCommand(intent, flags, startId);
     }
+
     @SuppressLint("ForegroundServiceType")
     @Override
     public void onCreate() {
         super.onCreate();
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentText("Playing....")
+                .setContentText("Playing...")
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setStyle(new NotificationCompat.BigTextStyle()
-                        .bigText("name_track"))
+                        .bigText("You've just got RICK-ROLLED!!!\n\nTrack:\nRick Astley - Never Gonna Give You Up"))
                 .setContentTitle("Music Player");
         int importance = NotificationManager.IMPORTANCE_DEFAULT;
         NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Student Zhuravleva Y.S. Notification", importance);
@@ -56,9 +57,10 @@ public class PlayerService extends Service {
 
         startForeground(1, builder.build());
 
-        mediaPlayer= MediaPlayer.create(this, R.raw.music);
+        mediaPlayer= MediaPlayer.create(this, R.raw.rickroll);
         mediaPlayer.setLooping(false);
     }
+
     @Override
     public void onDestroy() {
         stopForeground(true);

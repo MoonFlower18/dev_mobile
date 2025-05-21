@@ -13,7 +13,7 @@ public class MyLooper extends Thread {
     public Handler mHandler;
     private Handler mainHandler;
     public MyLooper(Handler	mainThreadHandler) {
-        mainHandler	= mainThreadHandler;
+        mainHandler = mainThreadHandler;
     }
     public void run() {
         Log.d("MyLooper", "run");
@@ -22,23 +22,20 @@ public class MyLooper extends Thread {
             public void	handleMessage(Message msg) {
                 String data = msg.getData().getString("KEY");
                 Log.d("MyLooper get message: ", data);
+                String data_age = msg.getData().getString("KEY2");
+                Log.d("MyLooper get age: ", data_age);
+                String data_work = msg.getData().getString("KEY3");
+                Log.d("MyLooper get work: ", data_work);
 
-                String data2 = msg.getData().getString("KEY2");
-                Log.d("MyLooper2 get message: ", data2);
-
-                String data3 = msg.getData().getString("KEY3");
-                Log.d("MyLooper3 get message: ", data3);
-
-                int delay = 0;
+                int wait_time = 0;
                 try {
-                    delay = Integer.parseInt(data2);
+                    wait_time = Integer.parseInt(data_age);
                 } catch (NumberFormatException e) {
-                    Log.e("MyLooper", "Invalid number format for delay: " + data2);
+                    Log.e("MyLooper", "Invalid number format for wait_time: " + data_age);
                 }
-
                 try {
-                    if (delay > 0) {
-                        TimeUnit.SECONDS.sleep(delay);
+                    if (wait_time > 0) {
+                        TimeUnit.SECONDS.sleep(wait_time);
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -47,10 +44,8 @@ public class MyLooper extends Thread {
                 int	count = data.length();
                 Message	message = new Message();
                 Bundle bundle = new	Bundle();
-
                 bundle.putString("result", String.format("The number of letters in the word %s is %d", data, count));
-                bundle.putString("result2", String.format("My age is %s and my work is %s", data2, data3));
-
+                bundle.putString("my_result", String.format("My age is %s and my work is %s", data_age, data_work));
                 message.setData(bundle);
                 mainHandler.sendMessage(message);
             }

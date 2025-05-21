@@ -1,11 +1,8 @@
 package com.mirea.zhuravleva.cryptoloader;
 
 import android.os.Bundle;
-import android.widget.EditText;
-import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +11,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
+
+import com.mirea.zhuravleva.cryptoloader.databinding.ActivityMainBinding;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -26,18 +25,16 @@ import javax.crypto.spec.SecretKeySpec;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
 
     private static final int LOADER_ID = 1;
-    private EditText editTextInput;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding	= ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        editTextInput = findViewById(R.id.editTextText);
-        Button buttonEncrypt = findViewById(R.id.button);
-
-        buttonEncrypt.setOnClickListener(v -> {
-            String inputText = editTextInput.getText().toString();
+        binding.button.setOnClickListener(v -> {
+            String inputText = binding.editTextText.getText().toString();
             SecretKey key = generateKey();
             byte[] encryptedMessage = encryptMsg(inputText, key);
 

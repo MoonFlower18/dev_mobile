@@ -22,9 +22,9 @@ public class UploadWorker extends Worker {
     public Result doWork() {
         Log.d(TAG, "doWork: start");
         try {
-            TimeUnit.SECONDS.sleep(5);
+            TimeUnit.SECONDS.sleep(3);
 
-            //тут функция какая-то
+            //тут просто функция с меткой
             someFunction();
 
         } catch (InterruptedException e) {

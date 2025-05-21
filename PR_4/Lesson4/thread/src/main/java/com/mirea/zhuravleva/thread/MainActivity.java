@@ -1,11 +1,8 @@
 package com.mirea.zhuravleva.thread;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -25,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
         binding	= ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -34,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         mainThread.setName("Мой номер группы: 01, номер по списку: 13, мой любимый фильм: «Т-34»");
         infoTextView.append("\n Новое имя потока: " + mainThread.getName());
+
         Log.d(MainActivity.class.getSimpleName(), "Stack: " + Arrays.toString(mainThread.getStackTrace()));
         Log.d(MainActivity.class.getSimpleName(), "Group: " + mainThread.getThreadGroup());
 
@@ -66,25 +65,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.button2.setOnClickListener(new View.OnClickListener() {
+        binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new Thread(new Runnable() {
                     public void run() {
-                        String input1 = binding.editTextText.getText().toString();
-                        String input2 = binding.editTextText2.getText().toString();
+                        String lessons = binding.editTextText.getText().toString();
+                        String hours = binding.editTextText2.getText().toString();
 
-                        if (!input1.isEmpty() && !input2.isEmpty()) {
-                            int num1 = Integer.parseInt(input1);
-                            int num2 = Integer.parseInt(input2);
+                        if (!lessons.isEmpty() && !hours.isEmpty()) {
+                            int num_les = Integer.parseInt(lessons);
+                            int num_hrs = Integer.parseInt(hours);
 
-                            if (num2 != 0) {
-                                int result = num1 / num2;
+                            if (num_hrs != 0) {
+                                int result = num_les / num_hrs;
 
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        binding.textView2.setText(" " + result);
+                                        binding.textViewResult.setText(" " + result);
                                     }
                                 });
                             }

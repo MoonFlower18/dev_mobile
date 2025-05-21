@@ -21,16 +21,12 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-//        Constraints constraints = new Constraints.Builder()
-//                .build();
+//        На случай проверки работы без условий \|/
+//        Constraints constraints = new Constraints.Builder().build();
 
-        Constraints constraints	= new Constraints.Builder()
-                .setRequiredNetworkType(NetworkType.UNMETERED)
-                .setRequiresCharging(true)
-                .build();
+        Constraints constraints	= new Constraints.Builder().setRequiredNetworkType(NetworkType.UNMETERED).setRequiresCharging(true).build();
 
-        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(UploadWorker.class)
-                .setConstraints(constraints).build();
+        WorkRequest uploadWorkRequest = new OneTimeWorkRequest.Builder(UploadWorker.class).setConstraints(constraints).build();
         WorkManager.getInstance(this).enqueue(uploadWorkRequest);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
