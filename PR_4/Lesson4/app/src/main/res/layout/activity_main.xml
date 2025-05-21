@@ -8,39 +8,6 @@
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/editTextTextMirea"
-        android:layout_width="358dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="text"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textColor="#211511"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/buttonMirea"
-        android:layout_width="188dp"
-        android:layout_height="41dp"
-        android:text="Нажми на меня"
-        android:backgroundTint="#C5B59C"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textColor="#211511"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMirea"
-        app:layout_constraintVertical_bias="0.013" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="412dp"
@@ -68,22 +35,56 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView14"
         android:layout_width="360dp"
         android:layout_height="43dp"
-        android:text="Задание №1: Привязка графических компонентов (binding)"
         android:fontFamily="sans-serif-smallcaps"
+        android:text="Задание №5: Реализация фонового загрузчика Loader"
         android:textColor="#211511"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.031" />
+        app:layout_constraintTop_toBottomOf="@+id/navbut4"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <Button
+        android:id="@+id/navbut2"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#C5B59C"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Открыть модуль thread"
+        android:textColor="#211511"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.015" />
+
+    <Button
+        android:id="@+id/buttonMirea"
+        android:layout_width="188dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#C5B59C"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Нажми на меня"
+        android:textColor="#211511"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMirea"
+        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/textView8"
@@ -98,103 +99,7 @@
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonMirea"
-        app:layout_constraintVertical_bias="0.018" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="360dp"
-        android:layout_height="43dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Задание №3: Передача данных между потоками"
-        android:textColor="#211511"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_but2"
-        app:layout_constraintVertical_bias="0.018" />
-
-    <Button
-        android:id="@+id/nav_but6"
-        android:layout_width="322dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#C5B59C"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Открыть модуль serviceapp"
-        android:textColor="#211511"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15"
-        app:layout_constraintVertical_bias="0.084" />
-
-    <Button
-        android:id="@+id/nav_but5"
-        android:layout_width="322dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#C5B59C"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Открыть модуль workmanager"
-        android:textColor="#211511"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.611" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="360dp"
-        android:layout_height="43dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Задание №6: Реализация сервисной службы Service"
-        android:textColor="#211511"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_but4"
-        app:layout_constraintVertical_bias="0.047" />
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="360dp"
-        android:layout_height="43dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Задание №7: Реализация системы управления задачами"
-        android:textColor="#211511"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_but6"
-        app:layout_constraintVertical_bias="0.184" />
-
-    <Button
-        android:id="@+id/nav_but2"
-        android:layout_width="322dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#C5B59C"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Открыть модуль thread"
-        android:textColor="#211511"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintVertical_bias="0.014" />
 
     <TextView
         android:id="@+id/textView13"
@@ -208,11 +113,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_but"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintTop_toBottomOf="@+id/navbut3"
+        app:layout_constraintVertical_bias="0.019" />
 
     <Button
-        android:id="@+id/nav_but4"
+        android:id="@+id/navbut6"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#C5B59C"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Открыть модуль serviceapp"
+        android:textColor="#211511"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="360dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Задание №7: Реализация системы управления задачами"
+        android:textColor="#211511"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut6"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <Button
+        android:id="@+id/navbut5"
         android:layout_width="322dp"
         android:layout_height="42dp"
         android:backgroundTint="#C5B59C"
@@ -223,45 +160,30 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.045" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="360dp"
-        android:layout_height="43dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Задание №5: Реализация фонового загрузчика Loader"
-        android:textColor="#211511"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nav_but3"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <Button
-        android:id="@+id/nav_but"
+        android:id="@+id/navbut7"
         android:layout_width="322dp"
         android:layout_height="42dp"
         android:backgroundTint="#C5B59C"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Открыть модуль data_thread"
+        android:text="Открыть модуль workmanager"
         android:textColor="#211511"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        app:layout_constraintVertical_bias="0.16" />
 
     <Button
-        android:id="@+id/nav_but3"
+        android:id="@+id/navbut4"
         android:layout_width="322dp"
         android:layout_height="42dp"
         android:backgroundTint="#C5B59C"
@@ -272,9 +194,87 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintVertical_bias="0.021" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="360dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Задание №6: Реализация сервисной службы Service"
+        android:textColor="#211511"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut5"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <EditText
+        android:id="@+id/editTextTextMirea"
+        android:layout_width="357dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:inputType="text"
+        android:textColor="#211511"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/navbut3"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#C5B59C"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Открыть модуль data_thread"
+        android:textColor="#211511"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="360dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Задание №3: Передача данных между потоками"
+        android:textColor="#211511"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navbut2"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="360dp"
+        android:layout_height="43dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Задание №1: Привязка графических компонентов (binding)"
+        android:textColor="#211511"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.014" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
