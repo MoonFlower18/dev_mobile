@@ -26,24 +26,24 @@ public class MainActivity  extends  AppCompatActivity  {
    @Override
    protected  void  onCreate(Bundle savedInstanceState)  {
       super.onCreate(savedInstanceState);
-      binding  = ActivityMainBinding.inflate(getLayoutInflater());
-      View view  =  binding.getRoot();
+      binding = ActivityMainBinding.inflate(getLayoutInflater());
+      View view = binding.getRoot();
       setContentView(view);
-      if  (ContextCompat.checkSelfPermission(this,  POST_NOTIFICATIONS)  ==  PackageManager.PERMISSION_GRANTED)  {
+      if  (ContextCompat.checkSelfPermission(this, POST_NOTIFICATIONS)  ==  PackageManager.PERMISSION_GRANTED)  {
          Log.d(MainActivity.class.getSimpleName().toString(),  "Разрешения  получены");
       }  else  {
          Log.d(MainActivity.class.getSimpleName().toString(), "Нет разрешений!");
          ActivityCompat.requestPermissions(this, new String[]{POST_NOTIFICATIONS, FOREGROUND_SERVICE}, PermissionCode);
       }
 
-      binding.button.setOnClickListener(new View.OnClickListener()  {
+      binding.imageButton.setOnClickListener(new View.OnClickListener()  {
          @Override
          public  void  onClick(View  v)  {
             Intent serviceIntent = new Intent(MainActivity.this, PlayerService.class);
             ContextCompat.startForegroundService(MainActivity.this, serviceIntent);
          }
       });
-      binding.button2.setOnClickListener(new  View.OnClickListener()  {
+      binding.imageButton2.setOnClickListener(new  View.OnClickListener()  {
          @Override
          public void onClick(View v)  {
             stopService(

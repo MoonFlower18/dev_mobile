@@ -31,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
         TextView infoTextView = findViewById(R.id.textView);
         Thread mainThread = Thread.currentThread();
         infoTextView.setText("Имя текущего потока: " + mainThread.getName());
-// Меняем имя и выводим в текстовом поле
-        mainThread.setName("МОЙ НОМЕР ГРУППЫ: 01, НОМЕР ПО СПИСКУ: 13, МОЙ ЛЮБИМЫЙ ФИЛЬМ: \"Морские дьяволы\" ");
+
+        mainThread.setName("Мой номер группы: 01, номер по списку: 13, мой любимый фильм: «Т-34»");
         infoTextView.append("\n Новое имя потока: " + mainThread.getName());
         Log.d(MainActivity.class.getSimpleName(), "Stack: " + Arrays.toString(mainThread.getStackTrace()));
-        Log.d(MainActivity.class.getSimpleName(), "Group: " + mainThread.getThreadGroup()); // контрольная группа
+        Log.d(MainActivity.class.getSimpleName(), "Group: " + mainThread.getThreadGroup());
 
         final int[] counter = {0};
 
@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         int	numberThread = counter[0] +1;
                         counter[0] = numberThread;
-                        Log.d("ThreadProject",	String.format("Запущен	поток №	%d студентом группы	№ %s номер по " +
-                                "списку	№ %d ",	numberThread, "БИСО-01-20", 13));
+                        Log.d("ThreadProject",	String.format("Запущен поток № %d студентом группы № %s номер по " +
+                                "списку № %d ",	numberThread, "БИСО-01-20", 13));
                         long endTime = System.currentTimeMillis() + 20 * 1000;
                         while (System.currentTimeMillis() < endTime) {
                             synchronized (this) {
                                 try	{
-                                    wait(endTime	- System.currentTimeMillis());
+                                    wait(endTime - System.currentTimeMillis());
                                     Log.d(MainActivity.class.getSimpleName(), "Endtime: " + endTime);
                                 }
                                 catch (Exception e) {
@@ -74,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
                         String input1 = binding.editTextText.getText().toString();
                         String input2 = binding.editTextText2.getText().toString();
 
-                        // мб уведомки швырнуть на else...
-
                         if (!input1.isEmpty() && !input2.isEmpty()) {
                             int num1 = Integer.parseInt(input1);
                             int num2 = Integer.parseInt(input2);
@@ -86,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        binding.textView2.setText("Результат: " + result);
+                                        binding.textView2.setText(" " + result);
                                     }
                                 });
                             }
