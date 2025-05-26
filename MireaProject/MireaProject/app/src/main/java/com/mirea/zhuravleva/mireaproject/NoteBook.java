@@ -31,8 +31,6 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
-
-
 public class NoteBook extends Fragment {
 
     private static final int REQUEST_CODE_PERMISSION = 100;

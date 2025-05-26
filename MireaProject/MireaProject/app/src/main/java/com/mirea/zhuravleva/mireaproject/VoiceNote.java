@@ -38,41 +38,33 @@ public class VoiceNote extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Инициализация binding для фрагмента
         binding = FragmentVoiceNoteBinding.inflate(inflater, container, false);
-
-        // Доступность кнопки воспроизведения
         binding.play.setEnabled(false);
 
-        // Путь для сохранения записи
         recordFilePath = (new File(requireContext().getExternalFilesDir(Environment.DIRECTORY_MUSIC),
                 "/audiorecordtest.3gp")).getAbsolutePath();
-
-        // Проверка разрешений
         checkPermissions();
 
-        // Обработчик для кнопки записи
         binding.record.setOnClickListener(v -> {
             if (isStartRecording) {
-                binding.record.setText("Stop recording");
+                binding.record.setText("\uD83C\uDF99 Остановить запись");
                 binding.play.setEnabled(false);
                 startRecording();
             } else {
-                binding.record.setText("Start recording");
+                binding.record.setText("\uD83C\uDF99 Начало записи");
                 binding.play.setEnabled(true);
                 stopRecording();
             }
             isStartRecording = !isStartRecording;
         });
 
-        // Обработчик для кнопки воспроизведения
         binding.play.setOnClickListener(v -> {
             if (isStartPlaying) {
-                binding.play.setText("Stop playing");
+                binding.play.setText("\uD83D\uDD07 Остановить проигрывание");
                 binding.record.setEnabled(false);
                 startPlaying();
             } else {
-                binding.play.setText("Start playing");
+                binding.play.setText("\uD83D\uDD0A Начать проигрывание");
                 binding.record.setEnabled(true);
                 stopPlaying();
             }
@@ -82,7 +74,6 @@ public class VoiceNote extends Fragment {
         return binding.getRoot();
     }
 
-    // Проверка разрешений для записи и хранения
     private void checkPermissions() {
         Context context = requireContext();
         int audioRecordPermissionStatus = ContextCompat.checkSelfPermission(context,
@@ -101,7 +92,6 @@ public class VoiceNote extends Fragment {
         }
     }
 
-    // Обработка результатов запроса разрешений
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -116,7 +106,6 @@ public class VoiceNote extends Fragment {
         }
     }
 
-    // Старт записи
     private void startRecording() {
         recorder = new MediaRecorder();
         recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -131,14 +120,12 @@ public class VoiceNote extends Fragment {
         recorder.start();
     }
 
-    // Остановка записи
     private void stopRecording() {
         recorder.stop();
         recorder.release();
         recorder = null;
     }
 
-    // Старт воспроизведения
     private void startPlaying() {
         player = new MediaPlayer();
         try {
@@ -146,10 +133,9 @@ public class VoiceNote extends Fragment {
             player.prepare();
             player.start();
 
-            // Утечка ресурсов после окончания воспроизведения
             player.setOnCompletionListener(mp -> {
                 stopPlaying();
-                binding.play.setText("Start playing");
+                binding.play.setText("\uD83D\uDD0A Начать проигрывание");
                 binding.record.setEnabled(true);
                 isStartPlaying = true;
             });
@@ -158,13 +144,11 @@ public class VoiceNote extends Fragment {
         }
     }
 
-    // Остановка воспроизведения
     private void stopPlaying() {
         player.release();
         player = null;
     }
 
-    // Очищаем binding при уничтожении фрагмента
     @Override
     public void onDestroyView() {
         super.onDestroyView();
