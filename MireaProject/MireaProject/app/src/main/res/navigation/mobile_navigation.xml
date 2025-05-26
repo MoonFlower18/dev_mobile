@@ -41,4 +41,24 @@
         android:label="background_worker"
         tools:layout="@layout/background_worker" />
 
+    <fragment
+        android:id="@+id/nav_compas"
+        android:name="com.mirea.zhuravleva.mireaproject.Compas"
+        android:label="Compas"
+        tools:layout="@layout/fragment_compas" />
+
+    <fragment
+        android:id="@+id/nav_note"
+        android:name="com.mirea.zhuravleva.mireaproject.NoteBook"
+        android:label="NoteBook"
+        tools:layout="@layout/fragment_note_book" />
+
+    <fragment
+        android:id="@+id/nav_voicenote"
+        android:name="com.mirea.zhuravleva.mireaproject.VoiceNote"
+        android:label="Voice Note"
+        tools:layout="@layout/fragment_voice_note" />
+
+
+
 </navigation>

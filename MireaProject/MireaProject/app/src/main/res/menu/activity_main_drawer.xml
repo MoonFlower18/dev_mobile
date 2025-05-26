@@ -28,5 +28,18 @@
             android:id="@+id/nav_BackWorker"
             android:icon="@drawable/baseline_api_24"
             android:title="Check-Up Worker" />
+        <item
+            android:id="@+id/nav_compas"
+            android:icon="@drawable/baseline_explore_24"
+            android:title="Compas" />
+        <item
+            android:id="@+id/nav_note"
+            android:icon="@drawable/baseline_event_note_24"
+            android:title="NoteBook" />
+        <item
+            android:id="@+id/nav_voicenote"
+            android:icon="@drawable/baseline_edit_note_24"
+            android:title="Voice Note" />
+
     </group>
 </menu>
