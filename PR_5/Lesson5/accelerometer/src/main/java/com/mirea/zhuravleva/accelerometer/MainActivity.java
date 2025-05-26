@@ -6,7 +6,6 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,20 +13,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.mirea.zhuravleva.accelerometer.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
+
+    private ActivityMainBinding binding;
     private SensorManager sensorManager;
     private Sensor accelerometer;
-    private TextView azimuthTextView;
-    private TextView pitchTextView;
-    private TextView rollTextView;
-
-    // переделать под биндинг
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -39,9 +38,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
 
-        azimuthTextView = findViewById(R.id.textViewAzimuth);
-        pitchTextView = findViewById(R.id.textViewPitch);
-        rollTextView = findViewById(R.id.textViewRoll);
     }
     @Override
     protected void onPause() {
@@ -59,9 +55,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             float x = event.values[0];
             float y = event.values[1];
             float z = event.values[2];
-            azimuthTextView.setText(String.format("Azimuth: %s", x));
-            pitchTextView.setText(String.format("Pitch: %s", y));
-            rollTextView.setText(String.format("Roll: %s", z));
+
+            binding.tvAzimuth.setText(String.format("Азимут: %.4f", x));
+            binding.tvPitch.setText(String.format("Тангаж: %.4f", y));
+            binding.tvRoll.setText(String.format("Крен: %.4f", z));
         }
     }
 

@@ -25,14 +25,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
         SensorManager sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> sensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
         ListView listSensor = binding.sensorListView;
-
-// создаем список для отображения в ListView найденных датчиков
         ArrayList<HashMap<String, Object>> arrayList = new ArrayList<>();
+
         for (int i = 0; i < sensors.size(); i++) {
             HashMap<String, Object>  sensorTypeList = new HashMap<>();
             sensorTypeList.put("Name", sensors.get(i).getName());
@@ -40,13 +41,9 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add(sensorTypeList);
         }
 
-// создаем адаптер и устанавливаем тип адаптера - отображение двух полей
-        SimpleAdapter mHistory =
-                new SimpleAdapter(this, arrayList, android.R.layout.simple_list_item_2,
-                        new String[]{"Name", "Value"},
-                        new int[]{android.R.id.text1, android.R.id.text2});
+        SimpleAdapter mHistory = new SimpleAdapter(this, arrayList, android.R.layout.simple_list_item_2,
+                        new String[]{"Name", "Value"}, new int[]{android.R.id.text1, android.R.id.text2});
         listSensor.setAdapter(mHistory);
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

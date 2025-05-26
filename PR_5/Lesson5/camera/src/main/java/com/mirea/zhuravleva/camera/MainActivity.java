@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -57,14 +57,12 @@ public class MainActivity extends AppCompatActivity {
         if (cameraPermissionStatus == PackageManager.PERMISSION_GRANTED && storagePermissionStatus == PackageManager.PERMISSION_GRANTED) {
             isWork = true;
         } else {
-// Выполняется запрос к пользователь на получение необходимых разрешений
             ActivityCompat.requestPermissions(this, new String[] {
                     android.Manifest.permission.CAMERA,
                     android.Manifest.permission.WRITE_EXTERNAL_STORAGE
             }, REQUEST_CODE_PERMISSION);
         }
 
-        // Создание функции обработки результата от системного приложения «камера»
         ActivityResultCallback<ActivityResult> callback = new ActivityResultCallback<ActivityResult>() {
             @Override
             public void onActivityResult(ActivityResult result) {
@@ -74,24 +72,21 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+
         ActivityResultLauncher<Intent> cameraActivityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 callback);
 
-        // Обработчик нажатия на компонент «imageView»
         binding.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                // проверка на наличие разрешений для камеры
                 if (isWork) {
                     try {
                         File photoFile = createImageFile();
-                        // генерирование пути к файлу на основе authorities
                         String authorities = getApplicationContext().getPackageName() + ".fileprovider";
                         imageUri = FileProvider.getUriForFile(MainActivity.this, authorities, photoFile);
                         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
-
                         cameraActivityResultLauncher.launch(cameraIntent);
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -106,11 +101,9 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == REQUEST_CODE_PERMISSION) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-// Разрешение получено — можно получать локацию
                 isWork = true;
             } else {
-// Разрешение отклонено — нужно показать объяснение или отключить функцию
-                //Toast.makeText(this, "Ошибка! Для работы приложения нужны все разрешения.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Ошибка! Для работы приложения нужны все разрешения.", Toast.LENGTH_LONG).show();
             }
         }
     }

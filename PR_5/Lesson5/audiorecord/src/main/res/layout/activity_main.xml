@@ -11,34 +11,63 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Запись голоса (диктофон)"
+        android:textColor="#1D334A"
+        android:textSize="25dp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="416dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/paws" />
 
     <Button
-        android:id="@+id/recordButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Начать запись. №13, БИСО-01-20"
+        android:id="@+id/record"
+        android:layout_width="300dp"
+        android:layout_height="59dp"
+        android:backgroundTint="#A388BF"
+        android:fontFamily="sans-serif"
+        android:textColor="#1D334A"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:text="Начать запись.\n№13 по списку в группе БИСО-01-20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.118" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <Button
-        android:id="@+id/playButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/play"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#A388BF"
+        android:fontFamily="sans-serif"
+        android:textColor="#1D334A"
+        android:textSize="16dp"
+        android:textStyle="bold"
         android:text="Воспроизвести"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recordButton"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toBottomOf="@+id/record"
+        app:layout_constraintVertical_bias="0.033" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

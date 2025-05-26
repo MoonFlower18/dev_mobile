@@ -7,17 +7,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import android.Manifest;
+import android.widget.Toast;
 
 import com.mirea.zhuravleva.audiorecord.databinding.ActivityMainBinding;
 
@@ -29,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_PERMISSION = 200;
     private final String TAG = MainActivity.class.getSimpleName();
     private boolean isWork;
-    private String fileName = null;
-    private Button recordButton = null;
-    private Button playButton = null;
     private MediaRecorder recorder = null;
     private MediaPlayer player = null;
     boolean isStartRecording = true;
@@ -44,55 +37,50 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // инициализация кнопок записи и воспроизведения
-        recordButton = binding.recordButton;
-        playButton = binding.playButton;
-        playButton.setEnabled(false);
+        binding.play.setEnabled(false);
         recordFilePath = (new File(getExternalFilesDir(Environment.DIRECTORY_MUSIC),
                 "/audiorecordtest.3gp")).getAbsolutePath();
-        // проверка разрешений на запись аудио и запись на внешнюю память
 
         int audioRecordPermissionStatus = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.RECORD_AUDIO);
-        int storagePermissionStatus = ContextCompat.checkSelfPermission(this, android.Manifest.permission.
+        int storagePermissionStatus = ContextCompat.checkSelfPermission(this, Manifest.permission.
                 WRITE_EXTERNAL_STORAGE);
 
         if (audioRecordPermissionStatus == PackageManager.PERMISSION_GRANTED && storagePermissionStatus
                 == PackageManager.PERMISSION_GRANTED) {
             isWork = true;
         } else {
-            // Выполняется запрос к пользователь на получение необходимых разрешений
             ActivityCompat.requestPermissions(this, new String[] {
                     Manifest.permission.RECORD_AUDIO,
-                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_PERMISSION);
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CODE_PERMISSION);
         }
 
-        recordButton.setOnClickListener(new View.OnClickListener() {
+        binding.record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isStartRecording) {
-                    recordButton.setText("Stop recording");
-                    playButton.setEnabled(false);
+                    binding.record.setText("Stop recording");
+                    binding.play.setEnabled(false);
                     startRecording();
                 } else {
-                    recordButton.setText("Start recording");
-                    playButton.setEnabled(true);
+                    binding.record.setText("Start recording");
+                    binding.play.setEnabled(true);
                     stopRecording();
                 }
                 isStartRecording = !isStartRecording;
             }
         });
 
-        playButton.setOnClickListener(new View.OnClickListener() {
+        binding.play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isStartPlaying) {
-                    playButton.setText("Stop playing");
-                    recordButton.setEnabled(false);
+                    binding.play.setText("Stop playing");
+                    binding.record.setEnabled(false);
                     startPlaying();
                 } else {
-                    playButton.setText("Start playing");
-                    recordButton.setEnabled(true);
+                    binding.play.setText("Start playing");
+                    binding.record.setEnabled(true);
                     stopPlaying();
                 }
                 isStartPlaying = !isStartPlaying;
@@ -108,7 +96,10 @@ public class MainActivity extends AppCompatActivity {
             isWork = grantResults.length > 1 &&
                     grantResults[0] == PackageManager.PERMISSION_GRANTED &&
                     grantResults[1] == PackageManager.PERMISSION_GRANTED;
-            if (!isWork) finish();
+            if (!isWork) {
+                Toast.makeText(this, "Ошибка! Для работы приложения нужны все разрешения.", Toast.LENGTH_LONG).show();
+                finish();
+            }
         }
     }
 
@@ -142,8 +133,8 @@ public class MainActivity extends AppCompatActivity {
             // чтобы утечки ресов не было под конец записи
             player.setOnCompletionListener(mp -> {
                 stopPlaying();
-                playButton.setText("Start playing");
-                recordButton.setEnabled(true);
+                binding.play.setText("Start playing");
+                binding.record.setEnabled(true);
                 isStartPlaying = true;
             });
         } catch (IOException e) {
