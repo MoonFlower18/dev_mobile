@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Database;
@@ -22,13 +25,16 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.Update;
 
+import com.mirea.zhuravleva.employeedb.databinding.ActivityMainBinding;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ActivityMainBinding binding;
     private static final String TAG = "MainActivity";
-    // --- Entity ---
+
     @Entity(tableName = "superhero")
     public static class Superhero {
         @PrimaryKey(autoGenerate = true)
@@ -37,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         public String superpower;
         public String universe;
     }
-    // --- DAO ---
+
     @Dao
     public interface SuperheroDao {
         @Query("SELECT * FROM superhero")
@@ -51,23 +57,26 @@ public class MainActivity extends AppCompatActivity {
         @Delete
         void delete(Superhero superhero);
     }
-    // --- Database ---
     @Database(entities = {Superhero.class}, version = 1)
     public abstract static class AppDatabase extends RoomDatabase {
         public abstract SuperheroDao superheroDao();
     }
     private AppDatabase db;
     private SuperheroDao dao;
-    private EditText eTName, eTSuperpower, eTUniverse;
-    private Button bAdd, bUpdate, bDelete;
-    private RecyclerView recyclerView;
     private SuperheroAdapter adapter;
     private long selectedHeroId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Ваш layout
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         db = Room.databaseBuilder(getApplicationContext(),
                         AppDatabase.class, "superheroes_db")
@@ -75,23 +84,16 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         dao = db.superheroDao();
 
-        eTName = findViewById(R.id.editTextText);
-        eTSuperpower = findViewById(R.id.editTextText2);
-        eTUniverse = findViewById(R.id.editTextText3);
-        bAdd = findViewById(R.id.button);
-        bUpdate = findViewById(R.id.button2);
-        bDelete = findViewById(R.id.button3);
-        recyclerView = findViewById(R.id.recycler);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        binding.recycler.setLayoutManager(new LinearLayoutManager(this));
         adapter = new SuperheroAdapter(new ArrayList<>());
-        recyclerView.setAdapter(adapter);
+        binding.recycler.setAdapter(adapter);
 
         loadHeroesToList();
 
-        bAdd.setOnClickListener(v -> {
-            String name = eTName.getText().toString().trim();
-            String power = eTSuperpower.getText().toString().trim();
-            String universe = eTUniverse.getText().toString().trim();
+        binding.button.setOnClickListener(v -> {
+            String name = binding.editTextText.getText().toString().trim();
+            String power = binding.editTextText2.getText().toString().trim();
+            String universe = binding.editTextText3.getText().toString().trim();
 
             if (name.isEmpty()) {
                 Toast.makeText(this, "Введите имя героя", Toast.LENGTH_LONG).show();
@@ -108,15 +110,15 @@ public class MainActivity extends AppCompatActivity {
             loadHeroesToList();
         });
 
-        bUpdate.setOnClickListener(v -> {
+        binding.button2.setOnClickListener(v -> {
             if (selectedHeroId == -1) {
                 Toast.makeText(this, "Выберите героя из списка для обновления", Toast.LENGTH_LONG).show();
                 return;
             }
 
-            String name = eTName.getText().toString().trim();
-            String power = eTSuperpower.getText().toString().trim();
-            String universe = eTUniverse.getText().toString().trim();
+            String name = binding.editTextText.getText().toString().trim();
+            String power = binding.editTextText2.getText().toString().trim();
+            String universe = binding.editTextText3.getText().toString().trim();
 
             if (name.isEmpty()) {
                 Toast.makeText(this, "Введите имя героя", Toast.LENGTH_LONG).show();
@@ -140,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
             loadHeroesToList();
         });
 
-        bDelete.setOnClickListener(v -> {
+        binding.button3.setOnClickListener(v -> {
             if (selectedHeroId == -1) {
                 Toast.makeText(this, "Выберите героя из списка для удаления", Toast.LENGTH_LONG).show();
                 return;
@@ -166,9 +168,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clearFields() {
-        eTName.setText("");
-        eTSuperpower.setText("");
-        eTUniverse.setText("");
+        binding.editTextText.setText("");
+        binding.editTextText2.setText("");
+        binding.editTextText3.setText("");
     }
 
     private class SuperheroAdapter extends RecyclerView.Adapter<SuperheroAdapter.HeroViewHolder> {
@@ -215,9 +217,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 selectedHeroId = currentHero.id;
-                eTName.setText(currentHero.name);
-                eTSuperpower.setText(currentHero.superpower);
-                eTUniverse.setText(currentHero.universe);
+                binding.editTextText.setText(currentHero.name);
+                binding.editTextText2.setText(currentHero.superpower);
+                binding.editTextText3.setText(currentHero.universe);
                 Toast.makeText(MainActivity.this, "Герой выбран: " + currentHero.name, Toast.LENGTH_LONG).show();
             }
         }
