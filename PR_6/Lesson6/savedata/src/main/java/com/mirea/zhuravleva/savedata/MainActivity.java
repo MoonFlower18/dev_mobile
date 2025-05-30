@@ -15,7 +15,6 @@ import com.mirea.zhuravleva.savedata.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String PREFS_NAME = "MySavedFile";
     private EditText groupNumberEditText, listNumberEditText, favoriteMovieEditText;
     private ActivityMainBinding binding;
 
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences settings = getSharedPreferences("MySavedFile", MODE_PRIVATE);
         binding.editTextText.setText(settings.getString("groupNumber", ""));
         binding.editTextText2.setText(settings.getString("listNumber", ""));
         binding.editTextText3.setText(settings.getString("favoriteMovie", ""));
