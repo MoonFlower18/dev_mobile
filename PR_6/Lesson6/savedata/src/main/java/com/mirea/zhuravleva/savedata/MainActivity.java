@@ -15,7 +15,7 @@ import com.mirea.zhuravleva.savedata.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String PREFS_NAME = "MyPrefsFile";
+    private static final String PREFS_NAME = "MySavedFile";
     private EditText groupNumberEditText, listNumberEditText, favoriteMovieEditText;
     private ActivityMainBinding binding;
 
