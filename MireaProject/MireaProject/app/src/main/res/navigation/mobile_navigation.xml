@@ -65,5 +65,10 @@
         android:label="My Profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/nav_fragment_file"
+        android:name="com.mirea.zhuravleva.mireaproject.FileFragment"
+        android:label="File convert"
+        tools:layout="@layout/fragment_file" />
 
 </navigation>
