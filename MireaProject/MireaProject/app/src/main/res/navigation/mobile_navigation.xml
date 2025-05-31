@@ -59,6 +59,11 @@
         android:label="Voice Note"
         tools:layout="@layout/fragment_voice_note" />
 
+    <fragment
+        android:id="@+id/nav_my_profile"
+        android:name="com.mirea.zhuravleva.mireaproject.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile" />
 
 
 </navigation>

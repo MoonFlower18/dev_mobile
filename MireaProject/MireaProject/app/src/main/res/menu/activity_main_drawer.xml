@@ -40,6 +40,9 @@
             android:id="@+id/nav_voicenote"
             android:icon="@drawable/baseline_edit_note_24"
             android:title="Voice Note" />
-
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/baseline_emoji_people_24"
+            android:title="My profile" />
     </group>
 </menu>

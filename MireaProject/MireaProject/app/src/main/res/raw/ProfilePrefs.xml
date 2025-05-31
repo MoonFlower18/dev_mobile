@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <int name="gender" value="2131231292" />
+    <string name="name">Юлия</string>
+    <int name="age" value="23" />
+    <string name="email">juravleva.yuliya@mail.ru</string>
+</map>
