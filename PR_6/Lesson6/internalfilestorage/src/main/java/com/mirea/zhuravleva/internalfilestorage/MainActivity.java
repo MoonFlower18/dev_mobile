@@ -6,30 +6,29 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.mirea.zhuravleva.internalfilestorage.databinding.ActivityMainBinding;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
     private static final String FILE_NAME = "history_note.txt";
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        EditText dateEditText = findViewById(R.id.dateEditText);
-        EditText descriptionEditText = findViewById(R.id.descriptionEditText);
-        Button saveToFileButton = findViewById(R.id.saveToFileButton);
-
-        saveToFileButton.setOnClickListener(v -> {
-            String date = dateEditText.getText().toString();
-            String description = descriptionEditText.getText().toString();
+        binding.button.setOnClickListener(v -> {
+            String date = binding.editTextText.getText().toString();
+            String description = binding.editTextText2.getText().toString();
 
             if (!date.isEmpty() && !description.isEmpty()) {
                 saveToFile(date, description);

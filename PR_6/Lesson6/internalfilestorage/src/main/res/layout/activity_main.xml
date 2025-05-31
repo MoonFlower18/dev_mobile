@@ -8,9 +8,9 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/dateEditText"
-        android:layout_width="206dp"
-        android:layout_height="44dp"
+        android:id="@+id/editTextText"
+        android:layout_width="300dp"
+        android:layout_height="43dp"
         android:hint="Памятная дата"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,26 +20,26 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <EditText
-        android:id="@+id/descriptionEditText"
-        android:layout_width="349dp"
-        android:layout_height="48dp"
+        android:id="@+id/editTextText2"
+        android:layout_width="300dp"
+        android:layout_height="44dp"
         android:hint="Описание события"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText"
         app:layout_constraintVertical_bias="0.031" />
 
     <Button
-        android:id="@+id/saveToFileButton"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Сохранить в файл"
+        android:text="Записать событие"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
         app:layout_constraintVertical_bias="0.071" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

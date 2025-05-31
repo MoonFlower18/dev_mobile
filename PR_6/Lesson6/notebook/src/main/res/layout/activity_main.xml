@@ -7,10 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!-- Поле для цитаты -->
-
-    <!-- Кнопки -->
-
     <EditText
         android:id="@+id/editTextText"
         android:layout_width="384dp"
@@ -26,8 +22,8 @@
 
     <EditText
         android:id="@+id/editTextText2"
-        android:layout_width="379dp"
-        android:layout_height="144dp"
+        android:layout_width="373dp"
+        android:layout_height="48dp"
         android:gravity="top"
         android:hint="Цитата"
         android:inputType="textMultiLine"
@@ -35,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.033" />
 
     <Button
         android:id="@+id/button"
@@ -47,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <Button
         android:id="@+id/button2"
@@ -59,6 +55,6 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.039" />
+        app:layout_constraintVertical_bias="0.025" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

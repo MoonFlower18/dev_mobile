@@ -8,16 +8,17 @@
 
     <EditText
         android:id="@+id/editTextText"
-        android:layout_width="match_parent"
+        android:layout_width="235dp"
         android:layout_height="wrap_content"
-        android:hint="Введите имя любимого поэта"/>
+        android:gravity="center"
+        android:hint="Введите фамилию любимого поэта" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Сохранить"/>
+        android:text="Показать фотографию" />
 
     <LinearLayout
         android:id="@+id/layout"
@@ -35,4 +36,8 @@
             android:layout_marginTop="16dp"
             android:scaleType="centerCrop"/>
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="573dp" />
 </LinearLayout>
