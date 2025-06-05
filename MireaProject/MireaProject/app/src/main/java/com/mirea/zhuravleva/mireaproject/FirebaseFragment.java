@@ -40,26 +40,18 @@ public class FirebaseFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // инициализация Firebase Auth
         fb_auth = FirebaseAuth.getInstance();
-
-        // кнопка для входа в акк
         binding.signInZone.setOnClickListener(v -> signIn(
                 binding.emailZone.getText().toString(),
                 binding.passwordZone.getText().toString()));
 
-        // кнопка для создания акка
         binding.createAccZone.setOnClickListener(v -> createAccount(
                 binding.emailZone.getText().toString(),
                 binding.passwordZone.getText().toString()));
 
-        // выйти из акка
         binding.signOutZone.setOnClickListener(v -> signOut());
-
-        // верифицировать акк
         binding.verifMailZone.setOnClickListener(v -> sendEmailVerification());
 
-        // обработка системных отступов (если нужно)
         ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -70,7 +62,6 @@ public class FirebaseFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        // проверка на авторизацию
         FirebaseUser currentUser = fb_auth.getCurrentUser();
         updateUI(currentUser);
     }
@@ -108,8 +99,6 @@ public class FirebaseFragment extends Fragment {
             binding.signInZone.setVisibility(View.GONE);
             binding.createAccZone.setVisibility(View.GONE);
             binding.verifMailZone.setEnabled(!user.isEmailVerified());
-
-            // Переход на WebFragment после успешной аутентификации
             navigateToHomeWebFragment();
         } else {
             binding.signZone.setText(R.string.signed_out);
@@ -124,7 +113,6 @@ public class FirebaseFragment extends Fragment {
     }
 
     private void navigateToHomeWebFragment() {
-        // Используем Navigation Component для перехода
         NavController navController = Navigation.findNavController(requireView());
         navController.navigate(R.id.action_firebase_to_homeweb);
     }
