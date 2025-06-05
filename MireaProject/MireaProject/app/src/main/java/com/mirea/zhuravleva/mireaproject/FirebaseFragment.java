@@ -8,6 +8,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -106,6 +108,9 @@ public class FirebaseFragment extends Fragment {
             binding.signInZone.setVisibility(View.GONE);
             binding.createAccZone.setVisibility(View.GONE);
             binding.verifMailZone.setEnabled(!user.isEmailVerified());
+
+            // Переход на WebFragment после успешной аутентификации
+            navigateToHomeWebFragment();
         } else {
             binding.signZone.setText(R.string.signed_out);
             binding.infoZone.setText(null);
@@ -116,6 +121,12 @@ public class FirebaseFragment extends Fragment {
             binding.signInZone.setVisibility(View.VISIBLE);
             binding.createAccZone.setVisibility(View.VISIBLE);
         }
+    }
+
+    private void navigateToHomeWebFragment() {
+        // Используем Navigation Component для перехода
+        NavController navController = Navigation.findNavController(requireView());
+        navController.navigate(R.id.action_firebase_to_homeweb);
     }
 
     private void createAccount(String email, String password) {
