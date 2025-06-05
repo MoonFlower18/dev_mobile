@@ -77,7 +77,6 @@
         android:label="Firebase"
         tools:layout="@layout/fragment_firebase">
 
-        <!-- Добавляем действие для перехода к HomeWebFragment -->
         <action
             android:id="@+id/action_firebase_to_homeweb"
             app:destination="@id/nav_homeweb" />
