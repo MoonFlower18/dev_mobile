@@ -19,7 +19,6 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.mirea.zhuravleva.mireaproject.databinding.FragmentFileBinding;
 import com.mirea.zhuravleva.mireaproject.databinding.FragmentFirebaseBinding;
 
 import java.util.Objects;
@@ -71,7 +70,7 @@ public class FirebaseFragment extends Fragment {
 
         String email = binding.emailZone.getText().toString();
         if (email.isEmpty()) {
-            binding.emailZone.setError("Required.");
+            binding.emailZone.setError("Не заполнено поле e-mail");
             valid = false;
         } else {
             binding.emailZone.setError(null);
@@ -79,7 +78,7 @@ public class FirebaseFragment extends Fragment {
 
         String password = binding.passwordZone.getText().toString();
         if (password.isEmpty()) {
-            binding.passwordZone.setError("Required.");
+            binding.passwordZone.setError("Не заполнено поле пароля");
             valid = false;
         } else {
             binding.passwordZone.setError(null);
@@ -94,10 +93,13 @@ public class FirebaseFragment extends Fragment {
             binding.infoZone.setText(getString(R.string.firebase_status_fmt, user.getUid()));
             binding.verifMailZone.setVisibility(View.VISIBLE);
             binding.signOutZone.setVisibility(View.VISIBLE);
+            binding.textView2.setVisibility(View.VISIBLE);
             binding.emailZone.setVisibility(View.GONE);
             binding.passwordZone.setVisibility(View.GONE);
             binding.signInZone.setVisibility(View.GONE);
             binding.createAccZone.setVisibility(View.GONE);
+            binding.textView3.setVisibility(View.GONE);
+            binding.textView4.setVisibility(View.GONE);
             binding.verifMailZone.setEnabled(!user.isEmailVerified());
             navigateToHomeWebFragment();
         } else {
@@ -105,10 +107,13 @@ public class FirebaseFragment extends Fragment {
             binding.infoZone.setText(null);
             binding.signOutZone.setVisibility(View.GONE);
             binding.verifMailZone.setVisibility(View.GONE);
+            binding.textView2.setVisibility(View.GONE);
             binding.emailZone.setVisibility(View.VISIBLE);
             binding.passwordZone.setVisibility(View.VISIBLE);
             binding.signInZone.setVisibility(View.VISIBLE);
             binding.createAccZone.setVisibility(View.VISIBLE);
+            binding.textView3.setVisibility(View.VISIBLE);
+            binding.textView4.setVisibility(View.VISIBLE);
         }
     }
 
@@ -131,7 +136,7 @@ public class FirebaseFragment extends Fragment {
                         updateUI(user);
                     } else {
                         Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                        Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(requireContext(), "Не удалось авторизоваться", Toast.LENGTH_SHORT).show();
                         updateUI(null);
                     }
                 });
@@ -151,7 +156,7 @@ public class FirebaseFragment extends Fragment {
                         updateUI(user);
                     } else {
                         Log.w(TAG, "signInWithEmail:failure", task.getException());
-                        Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(requireContext(), "Не удалось авторизоваться", Toast.LENGTH_SHORT).show();
                         updateUI(null);
                     }
                     if (!task.isSuccessful()) {
@@ -174,12 +179,12 @@ public class FirebaseFragment extends Fragment {
                     binding.verifMailZone.setEnabled(true);
                     if (task.isSuccessful()) {
                         Toast.makeText(requireContext(),
-                                "Verification email sent to " + user.getEmail(),
+                                "Верификационное письмо отправлено по адресу: " + user.getEmail(),
                                 Toast.LENGTH_SHORT).show();
                     } else {
                         Log.e(TAG, "sendEmailVerification", task.getException());
                         Toast.makeText(requireContext(),
-                                "Failed to send verification email.",
+                                "Ошибка при отправке верификационного письма",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
