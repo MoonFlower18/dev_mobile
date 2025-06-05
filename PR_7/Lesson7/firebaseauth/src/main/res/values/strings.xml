@@ -12,7 +12,7 @@
 <string name="auth_failed">Authentication failed</string>
 <string name="firebase_status_fmt">Firebase UID: %s</string>
 <string name="firebase_user_management">Firebase User Management</string>
-<string name="emailpassword_status_fmt">Email User: %1$s (verified: %2$b)</string>
+<string name="emailpassword_status_fmt">%1$s\n(verified: %2$b)</string>
 <string name="emailpassword_title_text">Email and Password</string>
 <string name="error_sign_in_failed">Sign in failed, see logs for details.</string>
 </resources>

@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity{
 
         String email = binding.emailZone.getText().toString();
         if (email.isEmpty()) {
-            binding.emailZone.setError("Required.");
+            binding.emailZone.setError("Введите e-mail");
             valid = false;
         } else {
             binding.emailZone.setError(null);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity{
 
         String password = binding.passwordZone.getText().toString();
         if (password.isEmpty()) {
-            binding.passwordZone.setError("Required.");
+            binding.passwordZone.setError("Введите пароль");
             valid = false;
         } else {
             binding.passwordZone.setError(null);
@@ -94,20 +94,26 @@ public class MainActivity extends AppCompatActivity{
             binding.infoZone.setText(getString(R.string.firebase_status_fmt, user.getUid()));
             binding.verifMailZone.setVisibility(View.VISIBLE);
             binding.signOutZone.setVisibility(View.VISIBLE);
+            binding.textView2.setVisibility(View.VISIBLE);
             binding.emailZone.setVisibility(View.GONE);
             binding.passwordZone.setVisibility(View.GONE);
             binding.signInZone.setVisibility(View.GONE);
             binding.createAccZone.setVisibility(View.GONE);
+            binding.textView3.setVisibility(View.GONE);
+            binding.textView4.setVisibility(View.GONE);
             binding.verifMailZone.setEnabled(!user.isEmailVerified());
         } else {
             binding.signZone.setText(R.string.signed_out);
             binding.infoZone.setText(null);
             binding.signOutZone.setVisibility(View.GONE);
             binding.verifMailZone.setVisibility(View.GONE);
+            binding.textView2.setVisibility(View.GONE);
             binding.emailZone.setVisibility(View.VISIBLE);
             binding.passwordZone.setVisibility(View.VISIBLE);
             binding.signInZone.setVisibility(View.VISIBLE);
             binding.createAccZone.setVisibility(View.VISIBLE);
+            binding.textView3.setVisibility(View.VISIBLE);
+            binding.textView4.setVisibility(View.VISIBLE);
         }
     }
 
@@ -126,7 +132,7 @@ public class MainActivity extends AppCompatActivity{
                     updateUI(user);
                 } else {
                     Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                    Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Не удалось авторизоваться", Toast.LENGTH_SHORT).show();
                     updateUI(null);
                 }
             }
@@ -148,7 +154,7 @@ public class MainActivity extends AppCompatActivity{
                     updateUI(user);
                 } else {
                     Log.w(TAG, "signInWithEmail:failure", task.getException());
-                    Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Не удалось авторизоваться", Toast.LENGTH_SHORT).show();
                     updateUI(null);
                 }
                 if (!task.isSuccessful()) {
@@ -172,10 +178,10 @@ public class MainActivity extends AppCompatActivity{
             public void onComplete(@NonNull Task<Void> task) {
                 binding.verifMailZone.setEnabled(true);
                 if (task.isSuccessful()) {
-                    Toast.makeText(MainActivity.this, "Verification email sent to " + user.getEmail(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Письмо для верификации почтового ящика было отправлено на почту: " + user.getEmail(), Toast.LENGTH_SHORT).show();
                 } else {
                      Log.e(TAG, "sendEmailVerification", task.getException());
-                    Toast.makeText(MainActivity.this, "Failed to send verification email.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Ошибка при отправке верификационного письма", Toast.LENGTH_SHORT).show();
                 }
             }
         });
