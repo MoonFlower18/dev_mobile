@@ -1,38 +1,44 @@
-package com.mirea.zhuravleva.firebaseauth;
+package com.mirea.zhuravleva.mireaproject;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Toast;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.mirea.zhuravleva.firebaseauth.databinding.ActivityMainBinding;
+import com.mirea.zhuravleva.mireaproject.databinding.FragmentFileBinding;
+import com.mirea.zhuravleva.mireaproject.databinding.FragmentFirebaseBinding;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity{
+
+public class FirebaseFragment extends Fragment {
     private static final String TAG = "MyTest";
-    private ActivityMainBinding binding;
+    private FragmentFirebaseBinding binding;
     private FirebaseAuth fb_auth;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        binding = FragmentFirebaseBinding.inflate(inflater, container, false);
+        return binding.getRoot();
+    }
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
-        // активация фб
+        // инициализация Firebase Auth
         fb_auth = FirebaseAuth.getInstance();
 
         // кнопка для входа в акк
@@ -51,7 +57,8 @@ public class MainActivity extends AppCompatActivity{
         // верифицировать акк
         binding.verifMailZone.setOnClickListener(v -> sendEmailVerification());
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        // обработка системных отступов (если нужно)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.getRoot(), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -117,20 +124,18 @@ public class MainActivity extends AppCompatActivity{
             return;
         }
 
-        fb_auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "createUserWithEmail:success");
-                    FirebaseUser user = fb_auth.getCurrentUser();
-                    updateUI(user);
-                } else {
-                    Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                    Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                    updateUI(null);
-                }
-            }
-        });
+        fb_auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(requireActivity(), task -> {
+                    if (task.isSuccessful()) {
+                        Log.d(TAG, "createUserWithEmail:success");
+                        FirebaseUser user = fb_auth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
+                        Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        updateUI(null);
+                    }
+                });
     }
 
     private void signIn(String email, String password) {
@@ -139,23 +144,21 @@ public class MainActivity extends AppCompatActivity{
             return;
         }
 
-        fb_auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Log.d(TAG, "signInWithEmail:success");
-                    FirebaseUser user = fb_auth.getCurrentUser();
-                    updateUI(user);
-                } else {
-                    Log.w(TAG, "signInWithEmail:failure", task.getException());
-                    Toast.makeText(MainActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-                    updateUI(null);
-                }
-                if (!task.isSuccessful()) {
-                    binding.signZone.setText(R.string.auth_failed);
-                }
-            }
-        });
+        fb_auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(requireActivity(), task -> {
+                    if (task.isSuccessful()) {
+                        Log.d(TAG, "signInWithEmail:success");
+                        FirebaseUser user = fb_auth.getCurrentUser();
+                        updateUI(user);
+                    } else {
+                        Log.w(TAG, "signInWithEmail:failure", task.getException());
+                        Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show();
+                        updateUI(null);
+                    }
+                    if (!task.isSuccessful()) {
+                        binding.signZone.setText(R.string.auth_failed);
+                    }
+                });
     }
 
     private void signOut() {
@@ -167,17 +170,19 @@ public class MainActivity extends AppCompatActivity{
         binding.verifMailZone.setEnabled(false);
 
         final FirebaseUser user = fb_auth.getCurrentUser();
-        Objects.requireNonNull(user).sendEmailVerification().addOnCompleteListener(this, new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                binding.verifMailZone.setEnabled(true);
-                if (task.isSuccessful()) {
-                    Toast.makeText(MainActivity.this, "Verification email sent to " + user.getEmail(), Toast.LENGTH_SHORT).show();
-                } else {
-                     Log.e(TAG, "sendEmailVerification", task.getException());
-                    Toast.makeText(MainActivity.this, "Failed to send verification email.", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        Objects.requireNonNull(user).sendEmailVerification()
+                .addOnCompleteListener(requireActivity(), task -> {
+                    binding.verifMailZone.setEnabled(true);
+                    if (task.isSuccessful()) {
+                        Toast.makeText(requireContext(),
+                                "Verification email sent to " + user.getEmail(),
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        Log.e(TAG, "sendEmailVerification", task.getException());
+                        Toast.makeText(requireContext(),
+                                "Failed to send verification email.",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/nav_firebase"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".FirebaseFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/signZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signed Out"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.045" />
+
+        <TextView
+            android:id="@+id/infoZone"
+            android:layout_width="279dp"
+            android:layout_height="44dp"
+            android:text=""
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signZone"
+            app:layout_constraintVertical_bias="0.015" />
+
+        <EditText
+            android:id="@+id/passwordZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailZone"
+            app:layout_constraintVertical_bias="0.028" />
+
+        <Button
+            android:id="@+id/signInZone"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Sign In"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordZone"
+            app:layout_constraintVertical_bias="0.001" />
+
+        <EditText
+            android:id="@+id/emailZone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signZone"
+            app:layout_constraintVertical_bias="0.106" />
+
+        <Button
+            android:id="@+id/createAccZone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Create Account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.988"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordZone"
+            app:layout_constraintVertical_bias="0.001" />
+
+        <Button
+            android:id="@+id/verifMailZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify Email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/signOutZone"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signInZone"
+            app:layout_constraintVertical_bias="0.069" />
+
+        <Button
+            android:id="@+id/signOutZone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.805"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/createAccZone"
+            app:layout_constraintVertical_bias="0.069" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

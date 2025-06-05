@@ -48,5 +48,9 @@
             android:id="@+id/nav_fragment_file"
             android:icon="@drawable/baseline_find_replace_24"
             android:title="File convert" />
+        <item
+            android:id="@+id/nav_firebase"
+            android:icon="@drawable/baseline_local_fire_department_24"
+            android:title="Firebase" />
     </group>
 </menu>

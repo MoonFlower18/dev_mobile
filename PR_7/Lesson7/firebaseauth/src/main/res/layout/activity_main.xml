@@ -109,5 +109,4 @@
         app:layout_constraintTop_toBottomOf="@+id/createAccZone"
         app:layout_constraintVertical_bias="0.069" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

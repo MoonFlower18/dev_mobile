@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -45,6 +46,10 @@ dependencies {
     implementation(libs.navigation.ui)
 
     implementation("androidx.work:work-runtime-ktx:2.10.1")
+    implementation(libs.firebase.auth)
+
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-scalars:2.9.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
